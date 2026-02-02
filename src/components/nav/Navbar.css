@@ -31,6 +31,12 @@
   color: white;
   margin: 0;
   letter-spacing: -0.5px;
+  transition: color 0.3s ease;
+}
+
+/* Logo diventa nero quando scrolli */
+.navbar.scrolled .navbar-logo h2 {
+  color: #1a1a1a;
 }
 
 .navbar-menu {
@@ -47,6 +53,11 @@
   transition: color 0.3s ease;
   cursor: pointer;
   position: relative;
+}
+
+/* Link diventano dorati quando scrolli */
+.navbar.scrolled .nav-link {
+  color: #c9a961;
 }
 
 .nav-link::after {
@@ -80,9 +91,14 @@
 .hamburger span {
   width: 25px;
   height: 3px;
-  background: #1a1a1a;
+  background: white;
   border-radius: 2px;
   transition: all 0.3s ease;
+}
+
+/* Hamburger diventa dorato quando scrolli */
+.navbar.scrolled .hamburger span {
+  background: #c9a961;
 }
 
 /* Responsive */
@@ -113,6 +129,7 @@
 
   .nav-link {
     font-size: 1.2rem;
+    color: #c9a961;
   }
 
   .nav-link::after {
