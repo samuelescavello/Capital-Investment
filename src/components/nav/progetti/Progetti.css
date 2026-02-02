@@ -197,16 +197,24 @@
   }
 
   .carousel-image {
-    height: 400px;
+    height: 350px;
   }
 
   .project-comparison {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   .comparison-arrow {
     transform: rotate(90deg);
+  }
+
+  .carousel-info {
+    padding: 1rem 0;
+  }
+
+  .project-location {
+    margin-bottom: 2rem;
   }
 }
 
@@ -215,19 +223,68 @@
     padding: 5rem 0;
   }
 
+  .section-header {
+    margin-bottom: 3rem;
+  }
+
   .section-title {
     font-size: 2rem;
   }
 
   .carousel {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 
   .project-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .carousel-image {
-    height: 300px;
+    height: 250px;
+  }
+
+  .roi-badge {
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .image-overlay {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .comparison-details p {
+    font-size: 0.9rem;
+    margin: 0.4rem 0;
+  }
+
+  .comparison-details .status {
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+  }
+
+  .carousel-controls {
+    margin-top: 2rem;
+    gap: 1.5rem;
+  }
+
+  .carousel-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-image {
+    height: 220px;
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+  }
+
+  .carousel {
+    padding: 1rem;
   }
 }
