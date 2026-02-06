@@ -1,3 +1,4 @@
+import "./ComeFunziona.css";
 const ComeFunziona = () => {
   const steps = [
     {
