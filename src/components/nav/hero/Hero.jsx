@@ -41,14 +41,13 @@ const Hero = () => {
         <div className="hero-text">
           <span className="hero-subtitle">Capital Investment</span>
           <h1 className="hero-title">
-            Trasformiamo <span className="highlight">Immobili</span>
-            <br />
-            in Opportunità
+            Da Immobili Invenduti
+            <br />a <span className="highlight">Opportunità Vincenti</span>
           </h1>
           <p className="hero-description">
-            Rivalorizziamo appartamenti di prestigio attraverso progettazione
-            intelligente e riqualificazione completa. Dal potenziale inespresso
-            al valore reale.
+            Trasformiamo appartamenti di grandi dimensioni che nessuno vuole in
+            unità moderne che tutti cercano. Risultato garantito: più
+            vendibilità, più valore, più profitto.
           </p>
           <div className="hero-buttons">
             <button
@@ -69,15 +68,15 @@ const Hero = () => {
         <div className="hero-stats">
           <div className="stat-item">
             <h3>50+</h3>
-            <p>Progetti Completati</p>
+            <p>Progetti di Successo</p>
           </div>
           <div className="stat-item">
             <h3>15.000mq</h3>
-            <p>Spazi Rivalorizzati</p>
+            <p>Trasformati in Valore</p>
           </div>
           <div className="stat-item">
             <h3>+40%</h3>
-            <p>ROI Medio</p>
+            <p>ROI Medio Garantito</p>
           </div>
         </div>
       </div>

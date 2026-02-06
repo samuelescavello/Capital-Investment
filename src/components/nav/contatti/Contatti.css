@@ -1,0 +1,400 @@
+.contatti {
+  padding: 8rem 0 0 0;
+  background: #fafafa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contatti-content {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 5rem;
+  margin-bottom: 5rem;
+}
+
+.contatti-left {
+  position: sticky;
+  top: 120px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.section-subtitle {
+  display: block;
+  color: #c9a961;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: #1a1a1a;
+  letter-spacing: -2px;
+  margin-bottom: 0;
+}
+
+/* Target Audience */
+.target-audience {
+  background: white;
+  padding: 2rem;
+  border-left: 4px solid #c9a961;
+}
+
+.target-audience h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+}
+
+.audience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.audience-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.audience-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.audience-text h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.3rem;
+}
+
+.audience-text p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Contact Info */
+.contatti-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.info-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.info-text h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.25rem;
+}
+
+.info-text p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Form */
+.contatti-right {
+  background: white;
+  padding: 3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.form-intro {
+  margin-bottom: 2.5rem;
+}
+
+.form-intro h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.form-intro p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.9rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #c9a961;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  background: #c9a961;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.submit-btn:hover {
+  background: #b89851;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(201, 169, 97, 0.3);
+}
+
+.privacy-note {
+  font-size: 0.85rem;
+  color: #999;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Footer */
+.footer {
+  background: #1a1a1a;
+  padding: 3rem 0;
+  margin-top: 5rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.footer-left h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.footer-left p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+
+.footer-right p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+}
+
+/* Notification */
+.notification {
+  position: fixed;
+  top: 100px;
+  right: 2rem;
+  z-index: 9999;
+  min-width: 350px;
+  max-width: 500px;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.4s ease-out;
+}
+
+.notification.success {
+  background: white;
+  border-left: 4px solid #c9a961;
+}
+
+.notification.error {
+  background: white;
+  border-left: 4px solid #ff6b6b;
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.notification-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.notification.success .notification-icon {
+  background: #c9a961;
+  color: white;
+}
+
+.notification.error .notification-icon {
+  background: #ff6b6b;
+  color: white;
+}
+
+.notification-content p {
+  flex: 1;
+  margin: 0;
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.notification-close {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #999;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.notification-close:hover {
+  color: #333;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive notification */
+@media (max-width: 768px) {
+  .notification {
+    top: 80px;
+    right: 1rem;
+    left: 1rem;
+    min-width: auto;
+    max-width: none;
+  }
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .contatti-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .contatti-left {
+    position: static;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .contatti {
+    padding: 5rem 0 0 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .contatti-right {
+    padding: 2rem;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+
+  .footer {
+    padding: 2rem 0;
+  }
+
+  .target-audience {
+    padding: 1.5rem;
+  }
+}

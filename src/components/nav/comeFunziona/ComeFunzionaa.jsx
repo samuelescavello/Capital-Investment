@@ -1,62 +1,94 @@
-import "./ComeFunziona.css";
-
 const ComeFunziona = () => {
   const steps = [
     {
       number: "01",
-      title: "Selezione",
+      title: "Selezione Strategica",
       description:
-        "Individuiamo appartamenti di grandi dimensioni con posizione strategica ma distribuzione superata.",
+        "Acquistiamo appartamenti di grandi dimensioni che altri considerano problematici. Per noi sono diamanti grezzi.",
     },
     {
       number: "02",
-      title: "Acquisto",
+      title: "Analisi Vincente",
       description:
-        "Valutiamo fattibilità tecnica ed economica, analizzando ogni aspetto urbanistico e commerciale.",
+        "Studio completo: urbanistica, mercato, margini. Zero improvvisazione. Solo numeri che funzionano.",
     },
     {
       number: "03",
-      title: "Progettazione",
+      title: "Progettazione Intelligente",
       description:
-        "Riprogettazione completa degli spazi con frazionamento intelligente per creare unità moderne.",
+        "Riprogettazione completa: da uno spazio obsoleto a più unità moderne che il mercato cerca davvero.",
     },
     {
       number: "04",
-      title: "Ristrutturazione",
+      title: "Ristrutturazione Premium",
       description:
-        "Riqualificazione totale degli spazi con materiali di qualità e attenzione ai dettagli.",
+        "Materiali di qualità, esecuzione impeccabile. Creiamo case che vendono, non solo belle foto.",
     },
     {
       number: "05",
-      title: "Valorizzazione",
+      title: "Profitto Garantito",
       description:
-        "Commercializzazione delle unità immobiliari rivalorizzate, pronte per il mercato contemporaneo.",
+        "Unità pronte, appetibili, vendibili. ROI medio del 40%. I numeri parlano chiaro.",
     },
   ];
 
-  return (
-    <section id="come-funziona" className="come-funziona">
-      <div className="container">
-        <div className="section-header">
-          <span className="section-subtitle">Il Nostro Metodo</span>
-          <h2 className="section-title">Come Funziona</h2>
-        </div>
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
-        <div className="steps-wrapper">
-          {steps.map((step, index) => (
-            <div key={index} className="step-item">
-              <div className="step-left">
-                <span className="step-number">{step.number}</span>
+  return (
+    <>
+      <section id="come-funziona" className="come-funziona">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-subtitle">Il Nostro Metodo</span>
+            <h2 className="section-title">Come Funziona</h2>
+          </div>
+
+          <div className="steps-wrapper">
+            {steps.map((step, index) => (
+              <div key={index} className="step-item">
+                <div className="step-left">
+                  <span className="step-number">{step.number}</span>
+                </div>
+                <div className="step-right">
+                  <h3 className="step-title">{step.title}</h3>
+                  <p className="step-description">{step.description}</p>
+                </div>
               </div>
-              <div className="step-right">
-                <h3 className="step-title">{step.title}</h3>
-                <p className="step-description">{step.description}</p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Box */}
+      <div className="cta-section">
+        <div className="cta-content">
+          <div className="cta-left">
+            <span className="cta-label">Valutazione Gratuita</span>
+            <h3>
+              Immobile Invenduto?
+              <br />
+              Trasformiamolo in Profitto
+            </h3>
+          </div>
+          <div className="cta-right">
+            <p>
+              Ti rispondiamo in 48 ore con un'analisi preliminare senza impegno
+            </p>
+            <button
+              onClick={() => scrollToSection("contatti")}
+              className="cta-button"
+            >
+              Richiedi Valutazione →
+            </button>
+          </div>
         </div>
       </div>
-    </section>
+    </>
   );
 };
 

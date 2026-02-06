@@ -92,6 +92,128 @@
   max-width: 550px;
 }
 
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #c9a961 50%,
+    transparent 100%
+  );
+}
+
+.cta-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.cta-left {
+  color: white;
+}
+
+.cta-label {
+  display: inline-block;
+  color: #c9a961;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #c9a961;
+  border-radius: 20px;
+}
+
+.cta-left h3 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+  color: white;
+}
+
+.cta-right {
+  text-align: left;
+}
+
+.cta-right p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background: #c9a961;
+  color: white;
+  padding: 1.2rem 2.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cta-button:hover {
+  background: #b89851;
+  transform: translateX(5px);
+  box-shadow: 0 10px 30px rgba(201, 169, 97, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .cta-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 3rem 2rem;
+  }
+
+  .cta-left h3 {
+    font-size: 2.2rem;
+  }
+
+  .cta-right {
+    text-align: center;
+  }
+
+  .cta-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-left h3 {
+    font-size: 1.8rem;
+  }
+
+  .cta-right p {
+    font-size: 1rem;
+  }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .come-funziona {

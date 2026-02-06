@@ -14,59 +14,63 @@ const ChiSiamo = () => {
           <div className="chi-siamo-right">
             <div className="text-block">
               <p>
-                Siamo una società specializzata nella{" "}
-                <strong>
-                  rivalorizzazione del patrimonio edilizio residenziale
-                </strong>
-                , con un approccio integrato che unisce analisi immobiliare,
-                progettazione architettonica e gestione completa
-                dell'intervento.
+                <strong>Non siamo una società immobiliare qualunque.</strong>{" "}
+                Siamo specialisti nella rivalorizzazione di immobili che altri
+                considerano "difficili". Quel palazzo d'epoca con l'appartamento
+                da 250mq che non vende da anni? Per noi è un'opportunità da 3
+                unità moderne.
               </p>
               <p>
-                La nostra attività si concentra sull'acquisto di appartamenti di
-                grandi dimensioni che, per caratteristiche distributive superate
-                o per una concezione abitativa non più in linea con le esigenze
-                attuali, risultano poco attrattivi per il mercato contemporaneo.
+                Mentre il mercato vede problemi, noi vediamo potenziale.{" "}
+                <strong>E lo trasformiamo in profitto concreto.</strong>
+                Analisi rigorosa, progettazione intelligente, esecuzione
+                impeccabile. Ogni progetto è studiato per generare valore reale,
+                non solo belle presentazioni.
               </p>
             </div>
 
             <div className="values-grid">
               <div className="value-item">
-                <h3>Rigore</h3>
+                <h3>Risultati Concreti</h3>
                 <p>
-                  Competenza tecnica e attenzione ai dettagli in ogni fase del
-                  progetto.
+                  ROI medio del 40%. Non promesse, ma numeri verificabili su
+                  ogni progetto.
                 </p>
               </div>
               <div className="value-item">
-                <h3>Trasparenza</h3>
+                <h3>Zero Rischi</h3>
                 <p>
-                  Comunicazione chiara e processi verificabili con tutti gli
-                  stakeholder.
+                  Analisi preventiva completa. Procediamo solo quando i numeri
+                  funzionano.
                 </p>
               </div>
               <div className="value-item">
-                <h3>Sostenibilità</h3>
+                <h3>Rapidità</h3>
                 <p>
-                  Rigenerazione del patrimonio esistente senza consumo di nuovo
-                  suolo.
+                  Dal progetto alla vendita in 6-9 mesi. Velocità che genera
+                  profitto.
                 </p>
               </div>
               <div className="value-item">
-                <h3>Qualità</h3>
+                <h3>Qualità Premium</h3>
                 <p>
-                  Materiali selezionati e soluzioni progettuali orientate al
-                  lungo termine.
+                  Materiali e finiture che fanno vendere. Investiamo dove conta
+                  davvero.
                 </p>
               </div>
             </div>
 
             <div className="mission-box">
-              <h3>La Nostra Missione</h3>
+              <h3>Il Nostro Obiettivo</h3>
               <p>
-                Trasformare immobili sottoutilizzati in abitazioni
-                contemporanee, funzionali e di valore, capaci di rispondere alle
-                esigenze di oggi e di mantenere nel tempo la loro attrattività.
+                Trasformare ogni immobile "difficile" in un successo
+                commerciale.
+                <strong>
+                  {" "}
+                  Più vendibilità per te, più valore per il mercato, più
+                  profitto per tutti.
+                </strong>
+                Semplice, misurabile, efficace.
               </p>
             </div>
           </div>
