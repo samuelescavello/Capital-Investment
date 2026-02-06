@@ -101,6 +101,10 @@
   background: #c9a961;
 }
 
+/* NUOVO: Hamburger diventa dorato quando menu è aperto */
+.hamburger.active span {
+  background: #c9a961;
+}
 /* Responsive */
 @media (max-width: 768px) {
   .hamburger {

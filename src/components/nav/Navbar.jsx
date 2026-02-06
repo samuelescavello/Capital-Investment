@@ -49,7 +49,10 @@ const Navbar = () => {
           </a>
         </div>
 
-        <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        <div
+          className={`hamburger ${menuOpen ? "active" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
           <span></span>
           <span></span>
           <span></span>
