@@ -10,7 +10,7 @@ const ComeFunziona = () => {
     },
     {
       number: "02",
-      title: "Acquisizione",
+      title: "Acquisto",
       description:
         "Valutiamo fattibilità tecnica ed economica, analizzando ogni aspetto urbanistico e commerciale.",
     },
