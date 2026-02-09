@@ -39,7 +39,6 @@ const Hero = () => {
 
       <div className="hero-content">
         <div className="hero-text">
-          <span className="hero-subtitle">Capital Investment</span>
           <h1 className="hero-title">
             Da Immobili Invenduti
             <br />a <span className="highlight">Opportunità Vincenti</span>
@@ -71,12 +70,12 @@ const Hero = () => {
             <p>Progetti di Successo</p>
           </div>
           <div className="stat-item">
-            <h3>15.000mq</h3>
+            <h3>6000mq</h3>
             <p>Trasformati in Valore</p>
           </div>
           <div className="stat-item">
             <h3>+40%</h3>
-            <p>ROI Medio Garantito</p>
+            <p>ROI Medio </p>
           </div>
         </div>
       </div>

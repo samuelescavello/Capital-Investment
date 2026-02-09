@@ -21,8 +21,8 @@ const ChiSiamo = () => {
                 unità moderne.
               </p>
               <p>
-                Mentre il mercato vede problemi, noi vediamo potenziale.{" "}
-                <strong>E lo trasformiamo in profitto concreto.</strong>
+                Mentre il mercato vede problemi, noi vediamo potenziale{" "}
+                <strong>e lo trasformiamo in profitto concreto. </strong>
                 Analisi rigorosa, progettazione intelligente, esecuzione
                 impeccabile. Ogni progetto è studiato per generare valore reale,
                 non solo belle presentazioni.
@@ -33,12 +33,12 @@ const ChiSiamo = () => {
               <div className="value-item">
                 <h3>Risultati Concreti</h3>
                 <p>
-                  ROI medio del 40%. Non promesse, ma numeri verificabili su
-                  ogni progetto.
+                  ROI medio del 40%. Non parole, ma numeri verificabili su ogni
+                  progetto.
                 </p>
               </div>
               <div className="value-item">
-                <h3>Zero Rischi</h3>
+                <h3>Analisi Accurata</h3>
                 <p>
                   Analisi preventiva completa. Procediamo solo quando i numeri
                   funzionano.

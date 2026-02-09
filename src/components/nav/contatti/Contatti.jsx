@@ -128,20 +128,12 @@ const Contatti = () => {
                   <p>info@capitalinvestment.it</p>
                 </div>
               </div>
-
-              <div className="info-item">
-                <div className="info-icon">📞</div>
-                <div className="info-text">
-                  <h4>Telefono</h4>
-                  <p>+39 02 1234 5678</p>
-                </div>
-              </div>
             </div>
           </div>
 
           <div className="contatti-right">
             <div className="form-intro">
-              <h3>Valutazione Gratuita in 48h</h3>
+              <h3>Offerta di acquisto sul tuo immobile in 48h</h3>
               <p>
                 Compila il form. Ti rispondiamo entro 48 ore con un'analisi
                 preliminare gratuita e senza impegno.
