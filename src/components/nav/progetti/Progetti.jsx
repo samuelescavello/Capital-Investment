@@ -4,141 +4,413 @@ import "./Progetti.css";
 const Progetti = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [activeUnit, setActiveUnit] = useState(0);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [email, setEmail] = useState("");
+  const [emailSent, setEmailSent] = useState(false);
+  const [emailError, setEmailError] = useState("");
 
-  const projects = [
+  const projectsCompletati = [
     {
       id: 1,
-      title: "Trilocale Finemente Ristrutturato",
-      location: "Milano, Piazza Carlo Stuparich 8",
-      category: "Ristrutturazione Completa",
+      title: "Via Elia",
+      location: "Milano, Via Elia",
+      status: "Completato",
+      mq: "80 mq",
+      piano: "1°",
+      investimento: "€ 390.000",
+      ricavato: "€ 560.000",
+      utile: "€ 170.000",
+      roi: "43,6%",
+      tempo: "11 mesi",
       image: "/img/caroselloImg/prog-1-slide-1.jpg",
-      description:
-        "Completa ristrutturazione di un appartamento di 65mq nel cuore di Milano. Intervento che ha previsto demolizione pareti, nuovo impianto elettrico e idraulico, pavimentazione in parquet.",
-      roi: "+38%",
-      financials: {
-        prezzoAcquisto: "€ 180.000",
-        costoRistrutturazione: "€ 45.000",
-        costoTotale: "€ 225.000",
-        prezzoVendita: "€ 310.000",
-        guadagnoNetto: "€ 85.000",
-      },
-      details: {
-        superficie: "65 mq",
-        anno: "2025",
-      },
-      gallery: [
-        "/img/caroselloImg/prog-1-slide-2.jpg",
-        "/img/caroselloImg/prog-1-slide-3.jpg",
-        "/img/caroselloImg/prog-1-slide-4.jpg",
-        "/img/caroselloImg/prog-1-slide-5.jpg",
-        "/img/caroselloImg/prog-1-slide-6.jpg",
-        "/img/caroselloImg/prog-1-slide-7.jpg",
-        "/img/caroselloImg/prog-1-slide-8.jpg",
-        "/img/caroselloImg/prog-1-slide-9.jpg",
+      units: [
+        {
+          name: "Unità 1",
+          mq: "40 mq",
+          photos: [
+            "/img/caroselloImg/prog-1-slide-1.jpg",
+            "/img/caroselloImg/prog-1-slide-2.jpg",
+            "/img/caroselloImg/prog-1-slide-3.jpg",
+          ],
+        },
+        {
+          name: "Unità 2",
+          mq: "40 mq",
+          photos: [
+            "/img/caroselloImg/prog-1-slide-4.jpg",
+            "/img/caroselloImg/prog-1-slide-5.jpg",
+            "/img/caroselloImg/prog-1-slide-6.jpg",
+          ],
+        },
       ],
     },
     {
       id: 2,
-      title: "Rifacimento Trilocale",
-      location: "Milano, Via Plinio 52",
-      category: "Ristrutturazione Completa",
+      title: "Via Pallanza",
+      location: "Milano, Via Pallanza",
+      status: "Completato",
+      mq: "50 mq",
+      piano: "1°",
+      investimento: "€ 170.000",
+      ricavato: "€ 210.000",
+      utile: "€ 40.000",
+      roi: "23,5%",
+      tempo: "2 mesi",
       image: "/img/caroselloImg/prog-2-slide-5.jpg",
-      description:
-        "Ristrutturazione completa di un trilocale con design moderno e funzionale.",
-      roi: "+42%",
-      financials: {
-        prezzoAcquisto: "€ 200.000",
-        costoRistrutturazione: "€ 50.000",
-        costoTotale: "€ 250.000",
-        prezzoVendita: "€ 355.000",
-        guadagnoNetto: "€ 105.000",
-      },
-      details: {
-        superficie: "70 mq",
-        anno: "2025",
-      },
-      gallery: [
-        "/img/caroselloImg/prog-2-slide-1.jpg",
-        "/img/caroselloImg/prog-2-slide-2.jpg",
-        "/img/caroselloImg/prog-2-slide-3.jpg",
-        "/img/caroselloImg/prog-2-slide-4.jpg",
+      units: [
+        {
+          name: "Unità 1",
+          mq: "50 mq",
+          photos: [
+            "/img/caroselloImg/prog-2-slide-5.jpg",
+            "/img/caroselloImg/prog-2-slide-1.jpg",
+            "/img/caroselloImg/prog-2-slide-2.jpg",
+          ],
+        },
       ],
     },
     {
       id: 3,
-      title: "Rifacimento Bilocale",
-      location: "Milano, Via Plinio 52",
-      category: "Ristrutturazione Completa",
+      title: "Via Scarampo",
+      location: "Milano, Via Scarampo",
+      status: "Completato",
+      mq: "120 mq",
+      piano: "1°",
+      investimento: "€ 590.000",
+      ricavato: "€ 837.000",
+      utile: "€ 247.000",
+      roi: "41,9%",
+      tempo: "12 mesi",
       image: "/img/caroselloImg/prog-3-slide-1.jpg",
-      description:
-        "Ristrutturazione completa di un bilocale ottimizzato per spazi moderni.",
-      roi: "+35%",
-      financials: {
-        prezzoAcquisto: "€ 120.000",
-        costoRistrutturazione: "€ 30.000",
-        costoTotale: "€ 150.000",
-        prezzoVendita: "€ 202.500",
-        guadagnoNetto: "€ 52.500",
-      },
-      details: {
-        superficie: "40 mq",
-        anno: "2025",
-      },
-      gallery: [
-        "/img/caroselloImg/prog-3-slide-2.jpg",
-        "/img/caroselloImg/prog-3-slide-3.jpg",
-        "/img/caroselloImg/prog-3-slide-4.jpg",
+      units: [
+        {
+          name: "Unità 1",
+          mq: "40 mq",
+          photos: [
+            "/img/caroselloImg/prog-3-slide-1.jpg",
+            "/img/caroselloImg/prog-3-slide-2.jpg",
+          ],
+        },
+        {
+          name: "Unità 2",
+          mq: "40 mq",
+          photos: [
+            "/img/caroselloImg/prog-3-slide-3.jpg",
+            "/img/caroselloImg/prog-3-slide-4.jpg",
+          ],
+        },
+        {
+          name: "Unità 3",
+          mq: "40 mq",
+          photos: [
+            "/img/caroselloImg/prog-3-slide-1.jpg",
+            "/img/caroselloImg/prog-3-slide-2.jpg",
+          ],
+        },
       ],
     },
     {
       id: 4,
-      title: "frazionamento in 4 unitá immobiliari",
-      location: "Milano, Via Ressi 16",
-      category: "Ristrutturazione Completa",
-      image: "/img/caroselloImg/prog-3-slide-1.jpg",
-      description:
-        "Ristrutturazione completa di un bilocale ottimizzato per spazi moderni.",
-      roi: "+35% previsto",
-      financials: {
-        prezzoAcquisto: "€ 710.000",
-        costoRistrutturazione: "€ 140.000",
-        costiVARI: "80.000",
-        costoTotale: "€ 930.000",
-        prezzoVendita: "€ 1.290.000",
-        guadagno: "€ 360.000",
-      },
-      details: {
-        superficie: "180 mq",
-        anno: "2025",
-      },
-      gallery: [
-        "/img/caroselloImg/prog-3-slide-2.jpg",
-        "/img/caroselloImg/prog-3-slide-3.jpg",
-        "/img/caroselloImg/prog-3-slide-4.jpg",
-        "/img/caroselloImg/prog-4-slide-1.jpeg",
+      title: "Via Plinio",
+      location: "Milano, Via Plinio",
+      status: "Completato",
+      mq: "180 mq",
+      piano: "1°",
+      investimento: "€ 1.100.000",
+      ricavato: "€ 1.391.000",
+      utile: "€ 291.000",
+      roi: "26,5%",
+      tempo: "11 mesi",
+      image: "/img/caroselloImg/prog-1-slide-1.jpg",
+      units: [
+        {
+          name: "Unità 1",
+          mq: "45 mq",
+          photos: [
+            "/img/caroselloImg/prog-1-slide-1.jpg",
+            "/img/caroselloImg/prog-1-slide-2.jpg",
+          ],
+        },
+        {
+          name: "Unità 2",
+          mq: "45 mq",
+          photos: [
+            "/img/caroselloImg/prog-1-slide-3.jpg",
+            "/img/caroselloImg/prog-1-slide-4.jpg",
+          ],
+        },
+        {
+          name: "Unità 3",
+          mq: "45 mq",
+          photos: [
+            "/img/caroselloImg/prog-1-slide-5.jpg",
+            "/img/caroselloImg/prog-1-slide-6.jpg",
+          ],
+        },
+        {
+          name: "Unità 4",
+          mq: "45 mq",
+          photos: [
+            "/img/caroselloImg/prog-1-slide-7.jpg",
+            "/img/caroselloImg/prog-1-slide-8.jpg",
+          ],
+        },
+      ],
+    },
+    {
+      id: 5,
+      title: "Piazza Stuparich",
+      location: "Milano, Piazza Stuparich",
+      status: "Completato",
+      mq: "180 mq",
+      piano: "3°",
+      investimento: "€ 435.000",
+      ricavato: "€ 773.000",
+      utile: "€ 338.000",
+      roi: "77,7%",
+      tempo: "12 mesi",
+      image: "/img/caroselloImg/prog-1-slide-8.jpg",
+      units: [
+        {
+          name: "Unità 1",
+          mq: "45 mq",
+          photos: [
+            "/img/caroselloImg/prog-1-slide-8.jpg",
+            "/img/caroselloImg/prog-1-slide-9.jpg",
+          ],
+        },
+        {
+          name: "Unità 2",
+          mq: "45 mq",
+          photos: [
+            "/img/caroselloImg/prog-2-slide-1.jpg",
+            "/img/caroselloImg/prog-2-slide-2.jpg",
+          ],
+        },
+        {
+          name: "Unità 3",
+          mq: "45 mq",
+          photos: [
+            "/img/caroselloImg/prog-2-slide-3.jpg",
+            "/img/caroselloImg/prog-2-slide-4.jpg",
+          ],
+        },
+        {
+          name: "Unità 4",
+          mq: "45 mq",
+          photos: [
+            "/img/caroselloImg/prog-2-slide-5.jpg",
+            "/img/caroselloImg/prog-3-slide-1.jpg",
+          ],
+        },
       ],
     },
   ];
 
+  const projectsInCorso = [
+    {
+      id: 6,
+      title: "Via Buenos Aires",
+      location: "Milano, Via Buenos Aires",
+      status: "In Corso",
+      mq: "140 mq",
+      piano: "4°",
+      investimento: "€ 890.000",
+      ricavato: "€ 1.200.000",
+      utile: "€ 310.000",
+      roi: "34,8%",
+      tempo: "12 mesi",
+      image: "/img/caroselloImg/prog-3-slide-1.jpg",
+      units: [
+        {
+          name: "Unità 1",
+          mq: "47 mq",
+          photos: ["/img/caroselloImg/prog-3-slide-1.jpg"],
+        },
+        {
+          name: "Unità 2",
+          mq: "47 mq",
+          photos: ["/img/caroselloImg/prog-3-slide-2.jpg"],
+        },
+        {
+          name: "Unità 3",
+          mq: "46 mq",
+          photos: ["/img/caroselloImg/prog-3-slide-3.jpg"],
+        },
+      ],
+    },
+    {
+      id: 7,
+      title: "Via Ressi",
+      location: "Milano, Via Ressi",
+      status: "In Corso",
+      mq: "180 mq",
+      piano: "6°",
+      investimento: "€ 1.000.000",
+      ricavato: "€ 1.260.000",
+      utile: "€ 260.000",
+      roi: "26%",
+      tempo: "10 mesi",
+      image: "/img/caroselloImg/prog-4-slide-1.jpeg",
+      units: [
+        {
+          name: "Unità 1",
+          mq: "45 mq",
+          photos: ["/img/caroselloImg/prog-4-slide-1.jpeg"],
+        },
+        {
+          name: "Unità 2",
+          mq: "45 mq",
+          photos: ["/img/caroselloImg/prog-3-slide-4.jpg"],
+        },
+        {
+          name: "Unità 3",
+          mq: "45 mq",
+          photos: ["/img/caroselloImg/prog-3-slide-1.jpg"],
+        },
+        {
+          name: "Unità 4",
+          mq: "45 mq",
+          photos: ["/img/caroselloImg/prog-3-slide-2.jpg"],
+        },
+      ],
+    },
+    {
+      id: 8,
+      title: "Via Palestrina",
+      location: "Milano, Via Palestrina",
+      status: "In Corso",
+      mq: "80 mq",
+      piano: "1°",
+      investimento: "€ 410.000",
+      ricavato: "€ 580.000",
+      utile: "€ 170.000",
+      roi: "41,5%",
+      tempo: "9 mesi",
+      image: "/img/caroselloImg/prog-2-slide-5.jpg",
+      units: [
+        {
+          name: "Unità 1",
+          mq: "40 mq",
+          photos: ["/img/caroselloImg/prog-2-slide-5.jpg"],
+        },
+        {
+          name: "Unità 2",
+          mq: "40 mq",
+          photos: ["/img/caroselloImg/prog-2-slide-1.jpg"],
+        },
+      ],
+    },
+    {
+      id: 9,
+      title: "Corso Lodi",
+      location: "Milano, Corso Lodi",
+      status: "In Corso",
+      mq: "80 mq",
+      piano: "3°",
+      investimento: "€ 390.000",
+      ricavato: "€ 560.000",
+      utile: "€ 170.000",
+      roi: "43,6%",
+      tempo: "9 mesi",
+      image: "/img/caroselloImg/prog-1-slide-1.jpg",
+      units: [
+        {
+          name: "Unità 1",
+          mq: "40 mq",
+          photos: ["/img/caroselloImg/prog-1-slide-1.jpg"],
+        },
+        {
+          name: "Unità 2",
+          mq: "40 mq",
+          photos: ["/img/caroselloImg/prog-1-slide-2.jpg"],
+        },
+      ],
+    },
+    {
+      id: 10,
+      title: "Via Veratti",
+      location: "Milano, Via Veratti",
+      status: "In Corso",
+      mq: "220 mq",
+      piano: "5°",
+      investimento: "€ 1.000.000",
+      ricavato: "€ 1.260.000",
+      utile: "€ 260.000",
+      roi: "26%",
+      tempo: "11 mesi",
+      image: "/img/caroselloImg/prog-3-slide-1.jpg",
+      units: [
+        {
+          name: "Unità 1",
+          mq: "73 mq",
+          photos: ["/img/caroselloImg/prog-3-slide-1.jpg"],
+        },
+        {
+          name: "Unità 2",
+          mq: "73 mq",
+          photos: ["/img/caroselloImg/prog-3-slide-2.jpg"],
+        },
+        {
+          name: "Unità 3",
+          mq: "74 mq",
+          photos: ["/img/caroselloImg/prog-3-slide-3.jpg"],
+        },
+      ],
+    },
+  ];
+
+  const allProjects = [...projectsCompletati, ...projectsInCorso];
+
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % projects.length);
+    setCurrentSlide((prev) => (prev + 1) % allProjects.length);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + projects.length) % projects.length);
+    setCurrentSlide(
+      (prev) => (prev - 1 + allProjects.length) % allProjects.length,
+    );
   };
 
   const openModal = (project) => {
     setSelectedProject(project);
+    setActiveUnit(0);
     setSelectedImageIndex(0);
+    setEmail("");
+    setEmailSent(false);
+    setEmailError("");
     document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
     setSelectedProject(null);
+    setActiveUnit(0);
     setSelectedImageIndex(0);
     document.body.style.overflow = "auto";
+  };
+
+  const switchUnit = (index) => {
+    setActiveUnit(index);
+    setSelectedImageIndex(0);
+  };
+
+  const handleEmailSubmit = (e) => {
+    e.preventDefault();
+    setEmailError("");
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email.trim()) {
+      setEmailError("Inserisci la tua email");
+      return;
+    }
+    if (!emailRegex.test(email)) {
+      setEmailError("Inserisci un'email valida");
+      return;
+    }
+
+    console.log("Email inviata:", email, "Progetto:", selectedProject.title);
+    setEmailSent(true);
   };
 
   return (
@@ -147,7 +419,24 @@ const Progetti = () => {
         <div className="progetti-container">
           <div className="section-header">
             <span className="section-subtitle">Portfolio</span>
-            <h2 className="section-title">Progetti Realizzati</h2>
+            <h2 className="section-title">I Nostri Progetti</h2>
+            <p className="section-stats">
+              <span className="stat-item">
+                <strong>10</strong> operazioni
+              </span>
+              <span className="stat-divider">•</span>
+              <span className="stat-item">
+                <strong>1.310 mq</strong> ristrutturati
+              </span>
+              <span className="stat-divider">•</span>
+              <span className="stat-item">
+                <strong>28</strong> unità
+              </span>
+              <span className="stat-divider">•</span>
+              <span className="stat-item">
+                ROI medio <strong>38,5%</strong>
+              </span>
+            </p>
           </div>
 
           <div className="carousel-wrapper">
@@ -156,7 +445,7 @@ const Progetti = () => {
             </button>
 
             <div className="carousel-container-progetti">
-              {projects.map((project, index) => (
+              {allProjects.map((project, index) => (
                 <div
                   key={project.id}
                   className={`carousel-slide-progetti ${index === currentSlide ? "active" : ""}`}
@@ -171,33 +460,37 @@ const Progetti = () => {
                     <div className="project-image-progetti">
                       <img src={project.image} alt={project.title} />
 
-                      {/* ROI Badge visibile sempre */}
+                      <div
+                        className={`status-badge ${project.status === "In Corso" ? "in-corso" : "completato"}`}
+                      >
+                        {project.status}
+                      </div>
+
                       <div className="roi-badge">
                         <span className="roi-label">ROI</span>
                         <span className="roi-value">{project.roi}</span>
                       </div>
 
                       <div className="project-overlay-progetti">
-                        <span className="project-category-progetti">
-                          {project.category}
-                        </span>
-                        <h3>{project.title}</h3>
-                        <p className="project-location-progetti">
-                          📍 {project.location}
-                        </p>
-                        <div className="overlay-financials">
-                          <div className="overlay-financial-item">
-                            <span>Acquisto</span>
-                            <strong>{project.financials.prezzoAcquisto}</strong>
+                        <h3>{project.location}</h3>
+                        <div className="overlay-stats">
+                          <div className="overlay-stat-item">
+                            <span>Investimento</span>
+                            <strong>{project.investimento}</strong>
                           </div>
-                          <div className="overlay-arrow">→</div>
-                          <div className="overlay-financial-item">
-                            <span>Vendita</span>
-                            <strong>{project.financials.prezzoVendita}</strong>
+                          <div className="overlay-stat-item">
+                            <span>Tempistica</span>
+                            <strong>{project.tempo}</strong>
+                          </div>
+                          <div className="overlay-stat-item">
+                            <span>Ricavato</span>
+                            <strong className="censored-value">
+                              € ***. ***
+                            </strong>
                           </div>
                         </div>
                         <button className="view-btn-progetti">
-                          Vedi Dettagli
+                          Scopri i Dettagli
                         </button>
                       </div>
                     </div>
@@ -212,7 +505,7 @@ const Progetti = () => {
           </div>
 
           <div className="carousel-indicators-progetti">
-            {projects.map((_, index) => (
+            {allProjects.map((_, index) => (
               <button
                 key={index}
                 className={`indicator-progetti ${index === currentSlide ? "active" : ""}`}
@@ -237,129 +530,182 @@ const Progetti = () => {
             </button>
 
             <div className="modal-grid-progetti">
-              {/* Gallery */}
+              {/* Left: Units Gallery */}
               <div className="modal-gallery-progetti">
+                {/* Unit Tabs */}
+                <div className="unit-tabs">
+                  {selectedProject.units.map((unit, index) => (
+                    <button
+                      key={index}
+                      className={`unit-tab ${activeUnit === index ? "active" : ""}`}
+                      onClick={() => switchUnit(index)}
+                    >
+                      <span className="unit-tab-name">{unit.name}</span>
+                      <span className="unit-tab-mq">{unit.mq}</span>
+                    </button>
+                  ))}
+                </div>
+
+                {/* Main Image */}
                 <div className="main-image-progetti">
                   <img
                     src={
-                      selectedImageIndex === 0
-                        ? selectedProject.image
-                        : selectedProject.gallery[selectedImageIndex - 1]
+                      selectedProject.units[activeUnit].photos[
+                        selectedImageIndex
+                      ] || selectedProject.units[activeUnit].photos[0]
                     }
-                    alt={selectedProject.title}
+                    alt={`${selectedProject.title} - ${selectedProject.units[activeUnit].name}`}
                   />
+                  <div className="image-counter">
+                    {selectedImageIndex + 1} /{" "}
+                    {selectedProject.units[activeUnit].photos.length}
+                  </div>
                 </div>
-                <div className="gallery-thumbs-progetti">
-                  <img
-                    src={selectedProject.image}
-                    alt="principale"
-                    onClick={() => setSelectedImageIndex(0)}
-                    className={selectedImageIndex === 0 ? "active" : ""}
-                  />
-                  {selectedProject.gallery.map((img, i) => (
-                    <img
-                      key={i}
-                      src={img}
-                      alt={`foto ${i + 1}`}
-                      onClick={() => setSelectedImageIndex(i + 1)}
-                      className={selectedImageIndex === i + 1 ? "active" : ""}
-                    />
-                  ))}
-                </div>
+
+                {/* Thumbnails */}
+                {selectedProject.units[activeUnit].photos.length > 1 && (
+                  <div className="gallery-thumbs-progetti">
+                    {selectedProject.units[activeUnit].photos.map((img, i) => (
+                      <img
+                        key={i}
+                        src={img}
+                        alt={`${selectedProject.units[activeUnit].name} - foto ${i + 1}`}
+                        onClick={() => setSelectedImageIndex(i)}
+                        className={selectedImageIndex === i ? "active" : ""}
+                      />
+                    ))}
+                  </div>
+                )}
               </div>
 
-              {/* Info */}
+              {/* Right: Info */}
               <div className="modal-info-progetti">
-                <span className="modal-category-progetti">
-                  {selectedProject.category}
-                </span>
+                <div className="modal-top-row">
+                  <span
+                    className={`modal-status-badge ${selectedProject.status === "In Corso" ? "in-corso" : "completato"}`}
+                  >
+                    {selectedProject.status}
+                  </span>
+                  <span className="modal-units-count">
+                    {selectedProject.units.length} unità
+                  </span>
+                </div>
+
                 <h2>{selectedProject.title}</h2>
                 <p className="modal-location-progetti">
                   📍 {selectedProject.location}
                 </p>
-                <div className="divider-progetti"></div>
-
-                {/* ROI Grande */}
-                <div className="modal-roi">
-                  <span className="modal-roi-label">
-                    Rendimento dell'operazione
-                  </span>
-                  <span className="modal-roi-value">{selectedProject.roi}</span>
-                </div>
 
                 <div className="divider-progetti"></div>
 
-                {/* Dettagli Finanziari */}
-                <div className="modal-financials">
-                  <h3>Analisi Finanziaria</h3>
-
-                  <div className="financial-flow">
-                    <div className="financial-box before">
-                      <span className="financial-box-label">Investimento</span>
-                      <div className="financial-item">
-                        <span>Prezzo Acquisto</span>
-                        <strong>
-                          {selectedProject.financials.prezzoAcquisto}
-                        </strong>
-                      </div>
-                      <div className="financial-item">
-                        <span>Costo Ristrutturazione</span>
-                        <strong>
-                          {selectedProject.financials.costoRistrutturazione}
-                        </strong>
-                      </div>
-                      <div className="financial-item total">
-                        <span>Costo Totale</span>
-                        <strong>
-                          {selectedProject.financials.costoTotale}
-                        </strong>
-                      </div>
-                    </div>
-
-                    <div className="financial-arrow">→</div>
-
-                    <div className="financial-box after">
-                      <span className="financial-box-label">Risultato</span>
-                      <div className="financial-item">
-                        <span>Prezzo Vendita</span>
-                        <strong>
-                          {selectedProject.financials.prezzoVendita}
-                        </strong>
-                      </div>
-                      <div className="financial-item profit">
-                        <span>Guadagno Netto</span>
-                        <strong>
-                          {selectedProject.financials.guadagnoNetto}
-                        </strong>
-                      </div>
-                    </div>
+                {/* Key Data */}
+                <div className="modal-key-data">
+                  <div className="key-data-item highlight">
+                    <span className="key-data-label">ROI</span>
+                    <span className="key-data-value gold">
+                      {selectedProject.roi}
+                    </span>
+                  </div>
+                  <div className="key-data-item">
+                    <span className="key-data-label">Investimento</span>
+                    <span className="key-data-value">
+                      {selectedProject.investimento}
+                    </span>
+                  </div>
+                  <div className="key-data-item">
+                    <span className="key-data-label">Tempistica</span>
+                    <span className="key-data-value">
+                      {selectedProject.tempo}
+                    </span>
                   </div>
                 </div>
 
                 <div className="divider-progetti"></div>
 
-                {/* Descrizione */}
-                <div className="modal-desc-section">
-                  <h3>Descrizione</h3>
-                  <p className="modal-description-progetti">
-                    {selectedProject.description}
-                  </p>
-                </div>
-
-                {/* Dettagli */}
+                {/* Property Details */}
                 <div className="details-grid-progetti">
                   <div className="detail-item-progetti">
-                    <span className="detail-label-progetti">Superficie</span>
+                    <span className="detail-label-progetti">
+                      Superficie Totale
+                    </span>
                     <span className="detail-value-progetti">
-                      {selectedProject.details.superficie}
+                      {selectedProject.mq}
                     </span>
                   </div>
                   <div className="detail-item-progetti">
-                    <span className="detail-label-progetti">Anno</span>
+                    <span className="detail-label-progetti">Piano</span>
                     <span className="detail-value-progetti">
-                      {selectedProject.details.anno}
+                      {selectedProject.piano}
                     </span>
                   </div>
+                  <div className="detail-item-progetti">
+                    <span className="detail-label-progetti">N° Unità</span>
+                    <span className="detail-value-progetti">
+                      {selectedProject.units.length}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="divider-progetti"></div>
+
+                {/* Censored Data */}
+                <div className="censored-data-section">
+                  <div className="censored-row">
+                    <span>Ricavato</span>
+                    <strong className="censored-blur">€ ***. ***</strong>
+                  </div>
+                  <div className="censored-row">
+                    <span>Utile Netto</span>
+                    <strong className="censored-blur">€ ***. ***</strong>
+                  </div>
+                </div>
+
+                {/* Brochure Form */}
+                <div className="brochure-form-section">
+                  {!emailSent ? (
+                    <>
+                      <div className="brochure-form-header">
+                        <span className="brochure-icon">📩</span>
+                        <div>
+                          <h3>Vuoi scoprire i numeri completi?</h3>
+                          <p>
+                            Lascia la tua email e riceverai la brochure con
+                            ricavato, utile e tutti i dettagli finanziari.
+                          </p>
+                        </div>
+                      </div>
+                      <div className="brochure-form-wrapper">
+                        <input
+                          type="email"
+                          placeholder="La tua email"
+                          value={email}
+                          onChange={(e) => {
+                            setEmail(e.target.value);
+                            setEmailError("");
+                          }}
+                          className={`brochure-email-input ${emailError ? "input-error" : ""}`}
+                        />
+                        <button
+                          className="brochure-submit-btn"
+                          onClick={handleEmailSubmit}
+                        >
+                          Invia
+                        </button>
+                      </div>
+                      {emailError && (
+                        <span className="brochure-error">{emailError}</span>
+                      )}
+                    </>
+                  ) : (
+                    <div className="brochure-success">
+                      <span className="success-icon">✓</span>
+                      <h3>Richiesta inviata!</h3>
+                      <p>
+                        Riceverai la brochure completa all'indirizzo{" "}
+                        <strong>{email}</strong>
+                      </p>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

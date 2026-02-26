@@ -221,20 +221,6 @@ const Contatti = () => {
           </div>
         </div>
       </div>
-
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-content">
-            <div className="footer-left">
-              <h3>Capital Investment</h3>
-              <p>Trasformiamo immobili in opportunità</p>
-            </div>
-            <div className="footer-right">
-              <p>&copy; 2024 Capital Investment. Tutti i diritti riservati.</p>
-            </div>
-          </div>
-        </div>
-      </footer>
     </section>
   );
 };

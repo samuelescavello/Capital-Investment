@@ -30,6 +30,26 @@
   font-weight: 300;
   color: #1a1a1a;
   letter-spacing: -2px;
+  margin-bottom: 1.2rem;
+}
+
+/* Stats */
+.section-stats {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+  color: #888;
+}
+
+.stat-item strong {
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+.stat-divider {
+  color: #ccc;
 }
 
 /* Carousel */
@@ -109,6 +129,30 @@
   transform: scale(1.05);
 }
 
+/* Status Badge */
+.status-badge {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 10;
+}
+
+.status-badge.completato {
+  background: rgba(39, 174, 96, 0.9);
+  color: white;
+}
+
+.status-badge.in-corso {
+  background: rgba(243, 156, 18, 0.9);
+  color: white;
+}
+
 /* ROI Badge */
 .roi-badge {
   position: absolute;
@@ -151,37 +195,17 @@
   color: white;
 }
 
-.project-category-progetti {
-  display: inline-block;
-  background: rgba(201, 169, 97, 0.9);
-  color: white;
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 0.75rem;
-}
-
 .project-overlay-progetti h3 {
   font-size: 1.8rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 1rem;
   font-weight: 600;
   color: white;
 }
 
-.project-location-progetti {
-  font-size: 0.9rem;
-  margin-bottom: 1.2rem;
-  opacity: 0.9;
-}
-
-/* Overlay Financials */
-.overlay-financials {
+/* Overlay Stats */
+.overlay-stats {
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
   margin-bottom: 1.2rem;
   background: rgba(0, 0, 0, 0.3);
   padding: 0.75rem 1rem;
@@ -189,28 +213,29 @@
   backdrop-filter: blur(5px);
 }
 
-.overlay-financial-item {
+.overlay-stat-item {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
 }
 
-.overlay-financial-item span {
-  font-size: 0.75rem;
+.overlay-stat-item span {
+  font-size: 0.7rem;
   color: rgba(255, 255, 255, 0.7);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-.overlay-financial-item strong {
-  font-size: 1rem;
+.overlay-stat-item strong {
+  font-size: 0.95rem;
   color: #c9a961;
   font-weight: 700;
 }
 
-.overlay-arrow {
-  font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.6);
+.censored-value {
+  letter-spacing: 2px;
+  user-select: none;
+  opacity: 0.7;
 }
 
 .view-btn-progetti {
@@ -347,11 +372,69 @@
   padding: 3rem;
 }
 
+/* ======================== */
+/* UNIT TABS                */
+/* ======================== */
+.unit-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.unit-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.65rem 1.2rem;
+  background: #f5f5f5;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 0;
+}
+
+.unit-tab:hover {
+  background: #eee;
+  border-color: #ddd;
+}
+
+.unit-tab.active {
+  background: #1a1a1a;
+  border-color: #c9a961;
+}
+
+.unit-tab-name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #999;
+  transition: color 0.3s ease;
+}
+
+.unit-tab.active .unit-tab-name {
+  color: #c9a961;
+}
+
+.unit-tab-mq {
+  font-size: 0.7rem;
+  color: #bbb;
+  transition: color 0.3s ease;
+}
+
+.unit-tab.active .unit-tab-mq {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 /* Gallery */
 .modal-gallery-progetti {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0;
 }
 
 .main-image-progetti {
@@ -359,29 +442,46 @@
   height: 380px;
   border-radius: 8px;
   overflow: hidden;
+  position: relative;
 }
 
 .main-image-progetti img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.image-counter {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  backdrop-filter: blur(4px);
 }
 
 .gallery-thumbs-progetti {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.75rem;
 }
 
 .gallery-thumbs-progetti img {
   width: 100%;
-  height: 80px;
+  height: 65px;
   object-fit: cover;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
   border: 2px solid transparent;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .gallery-thumbs-progetti img:hover,
@@ -397,17 +497,39 @@
   gap: 1.2rem;
 }
 
-.modal-category-progetti {
+.modal-top-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.modal-status-badge {
   display: inline-block;
-  background: #c9a961;
-  color: white;
   padding: 0.4rem 1rem;
   border-radius: 20px;
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  align-self: flex-start;
+}
+
+.modal-status-badge.completato {
+  background: #27ae60;
+  color: white;
+}
+
+.modal-status-badge.in-corso {
+  background: #f39c12;
+  color: white;
+}
+
+.modal-units-count {
+  font-size: 0.8rem;
+  color: #999;
+  font-weight: 600;
+  background: #f0f0f0;
+  padding: 0.35rem 0.8rem;
+  border-radius: 20px;
 }
 
 .modal-info-progetti h2 {
@@ -428,125 +550,57 @@
   background: #e0e0e0;
 }
 
-/* ROI Grande */
-.modal-roi {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #1a1a1a;
-  padding: 1.2rem 1.5rem;
-  border-radius: 8px;
-}
-
-.modal-roi-label {
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.7);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.modal-roi-value {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #c9a961;
-}
-
-/* Analisi Finanziaria */
-.modal-financials h3,
-.modal-desc-section h3 {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 1rem;
-}
-
-.financial-flow {
-  display: flex;
+/* Key Data */
+.modal-key-data {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  align-items: center;
 }
 
-.financial-box {
-  flex: 1;
-  padding: 1.2rem;
+.key-data-item {
+  background: #fafafa;
+  padding: 1rem;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  align-items: center;
+  gap: 0.4rem;
+  text-align: center;
+  border: 1px solid #e8e8e8;
 }
 
-.financial-box.before {
-  background: #fafafa;
-  border: 1px solid #e0e0e0;
+.key-data-item.highlight {
+  background: #1a1a1a;
+  border-color: #1a1a1a;
 }
 
-.financial-box.after {
-  background: #fafafa;
-  border: 1px solid #c9a961;
+.key-data-item.highlight .key-data-label {
+  color: rgba(255, 255, 255, 0.7);
 }
 
-.financial-box-label {
-  font-size: 0.75rem;
-  font-weight: 700;
+.key-data-label {
+  font-size: 0.7rem;
+  color: #999;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #999;
-}
-
-.financial-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.financial-item span {
-  font-size: 0.75rem;
-  color: #999;
-}
-
-.financial-item strong {
-  font-size: 0.95rem;
-  color: #1a1a1a;
+  letter-spacing: 1.5px;
   font-weight: 600;
 }
 
-.financial-item.total strong {
+.key-data-value {
+  font-size: 1.3rem;
+  font-weight: 700;
   color: #1a1a1a;
-  border-top: 1px solid #ddd;
-  padding-top: 0.5rem;
 }
 
-.financial-item.profit strong {
+.key-data-value.gold {
   color: #c9a961;
-  font-size: 1.1rem;
+  font-size: 1.6rem;
 }
 
-.financial-arrow {
-  font-size: 1.5rem;
-  color: #c9a961;
-  flex-shrink: 0;
-}
-
-/* Descrizione */
-.modal-desc-section {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.modal-description-progetti {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: #555;
-  margin: 0;
-}
-
-/* Dettagli */
+/* Details Grid */
 .details-grid-progetti {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   background: #fafafa;
   padding: 1rem;
@@ -557,6 +611,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
+  text-align: center;
 }
 
 .detail-label-progetti {
@@ -573,7 +628,178 @@
   font-weight: 600;
 }
 
-/* Responsive */
+/* Censored Data */
+.censored-data-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: #fafafa;
+  padding: 1.2rem;
+  border-radius: 8px;
+  border: 1px dashed #ddd;
+}
+
+.censored-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.censored-row span {
+  font-size: 0.9rem;
+  color: #999;
+  font-weight: 500;
+}
+
+.censored-blur {
+  font-size: 1.1rem;
+  color: #ccc;
+  letter-spacing: 3px;
+  user-select: none;
+  filter: blur(2px);
+}
+
+/* ======================== */
+/* BROCHURE FORM            */
+/* ======================== */
+.brochure-form-section {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  padding: 1.8rem;
+  border-radius: 12px;
+  border: 1px solid rgba(201, 169, 97, 0.3);
+}
+
+.brochure-form-header {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1.2rem;
+}
+
+.brochure-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.brochure-form-header h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.4rem 0;
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1.3;
+}
+
+.brochure-form-header p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.brochure-form-wrapper {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.brochure-email-input {
+  flex: 1;
+  padding: 0.85rem 1.2rem;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.brochure-email-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.brochure-email-input:focus {
+  border-color: #c9a961;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.brochure-email-input.input-error {
+  border-color: #e74c3c;
+}
+
+.brochure-submit-btn {
+  padding: 0.85rem 2rem;
+  background: #c9a961;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.brochure-submit-btn:hover {
+  background: #b8953e;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(201, 169, 97, 0.4);
+}
+
+.brochure-error {
+  display: block;
+  color: #e74c3c;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  padding-left: 0.2rem;
+}
+
+/* Success */
+.brochure-success {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.success-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: #c9a961;
+  color: white;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.brochure-success h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.5rem 0;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.brochure-success p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+.brochure-success p strong {
+  color: #c9a961;
+}
+
+/* ======================== */
+/* RESPONSIVE               */
+/* ======================== */
 @media (max-width: 968px) {
   .section-title {
     font-size: 2.5rem;
@@ -588,14 +814,6 @@
   .main-image-progetti {
     height: 300px;
   }
-
-  .financial-flow {
-    flex-direction: column;
-  }
-
-  .financial-arrow {
-    transform: rotate(90deg);
-  }
 }
 
 @media (max-width: 768px) {
@@ -609,6 +827,11 @@
 
   .section-title {
     font-size: 2rem;
+  }
+
+  .section-stats {
+    font-size: 0.85rem;
+    gap: 0.5rem;
   }
 
   .carousel-wrapper {
@@ -631,19 +854,60 @@
     font-size: 1.4rem;
   }
 
-  .overlay-financials {
+  .overlay-stats {
+    gap: 0.75rem;
     padding: 0.5rem 0.75rem;
+    flex-wrap: wrap;
   }
 
-  .overlay-financial-item strong {
-    font-size: 0.9rem;
+  .overlay-stat-item strong {
+    font-size: 0.85rem;
+  }
+
+  .unit-tabs {
+    gap: 0.35rem;
+  }
+
+  .unit-tab {
+    padding: 0.5rem 0.8rem;
+  }
+
+  .unit-tab-name {
+    font-size: 0.7rem;
   }
 
   .gallery-thumbs-progetti {
+    grid-template-columns: repeat(auto-fill, minmax(55px, 1fr));
+  }
+
+  .gallery-thumbs-progetti img {
+    height: 50px;
+  }
+
+  .modal-key-data {
+    grid-template-columns: 1fr;
+  }
+
+  .key-data-item {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .details-grid-progetti {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .modal-roi-value {
-    font-size: 2rem;
+  .brochure-form-wrapper {
+    flex-direction: column;
+  }
+
+  .brochure-submit-btn {
+    width: 100%;
+  }
+
+  .brochure-form-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
