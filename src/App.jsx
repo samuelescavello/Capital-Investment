@@ -7,8 +7,8 @@ import Progetti from "./components/nav/progetti/Progetti";
 
 import ChiSiamo from "./components/nav/chiSiamo/ChiSiamo";
 import Contatti from "./components/nav/contatti/Contatti";
-import Footer from "./components/nav/footer/Footer";
-import PrivacyPolicy from "./components/nav/privacy/PrivacyPolicy";
+import Footer from "./components/nav/Footer/Footer";
+import PrivacyPolicy from "./components/nav/Privacy/PrivacyPolicy";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
