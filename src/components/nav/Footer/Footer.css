@@ -55,7 +55,7 @@
 /* Grid */
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+  grid-template-columns: 1.5fr 1fr 1fr;
   gap: 3rem;
   margin-bottom: 4rem;
 }

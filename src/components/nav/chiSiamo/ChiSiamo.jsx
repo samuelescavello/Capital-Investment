@@ -15,17 +15,18 @@ const ChiSiamo = () => {
             <div className="text-block">
               <p>
                 <strong>Non siamo una società immobiliare qualunque.</strong>{" "}
-                Siamo specialisti nella rivalorizzazione di immobili che altri
-                considerano "difficili". Quel palazzo d'epoca con l'appartamento
-                da 250mq che non vende da anni? Per noi è un'opportunità da 3
-                unità moderne.
+                Siamo specialisti nella valorizzazione di immobili che altri
+                considerano "obsoleti". L'appartamento da 250mq che non si vende
+                da anni? Per noi è un'opportunità da cui ricavare 5 piccole
+                unità moderne e funzionali per giovani coppie o investitori.
               </p>
               <p>
                 Mentre il mercato vede problemi, noi vediamo potenziale{" "}
-                <strong>e lo trasformiamo in profitto concreto. </strong>
-                Analisi rigorosa, progettazione intelligente, esecuzione
-                impeccabile. Ogni progetto è studiato per generare valore reale,
-                non solo belle presentazioni.
+                <strong>e lo trasformiamo in profitto concreto </strong>
+                per i nostri investitori. Analisi rigorosa, progettazione
+                intelligente, esecuzione impeccabile. Ogni progetto è studiato
+                per generare valore reale, ci piace lasciare parlare i numeri ,
+                scarica la brochure per saperne di piu.
               </p>
             </div>
 
@@ -33,15 +34,15 @@ const ChiSiamo = () => {
               <div className="value-item">
                 <h3>Risultati Concreti</h3>
                 <p>
-                  ROI medio del 40%. Non parole, ma numeri verificabili su ogni
-                  progetto.
+                  ROI medio del 34,16%. Non parole, ma numeri verificabili su
+                  ogni progetto.
                 </p>
               </div>
               <div className="value-item">
                 <h3>Analisi Accurata</h3>
                 <p>
-                  Analisi preventiva completa. Procediamo solo quando i numeri
-                  funzionano.
+                  Analisi preventiva completa. Procediamo solo quando tutti i
+                  valori sono congelati e supportati da dati concreti. Rapidità
                 </p>
               </div>
               <div className="value-item">
@@ -53,24 +54,16 @@ const ChiSiamo = () => {
               </div>
               <div className="value-item">
                 <h3>Qualità Premium</h3>
-                <p>
-                  Materiali e finiture che fanno vendere. Investiamo dove conta
-                  davvero.
-                </p>
+                <p>Materiali e finiture che facilitano la vendita .</p>
               </div>
             </div>
 
             <div className="mission-box">
               <h3>Il Nostro Obiettivo</h3>
               <p>
-                Trasformare ogni immobile "difficile" in un successo
-                commerciale.
-                <strong>
-                  {" "}
-                  Più vendibilità per te, più valore per il mercato, più
-                  profitto per tutti.
-                </strong>
-                Semplice, misurabile, efficace.
+                Trasformare ogni immobile "obsoleto" in un successo commerciale.
+                Più vendibilità per te, più valore per il mercato, più profitto
+                per tutti. Semplice, misurabile, efficace.
               </p>
             </div>
           </div>

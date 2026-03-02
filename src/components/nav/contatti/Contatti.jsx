@@ -92,7 +92,7 @@ const Contatti = () => {
                 <div className="audience-item">
                   <div className="audience-icon">🏢</div>
                   <div className="audience-text">
-                    <h4>Hai un immobile che non vende?</h4>
+                    <h4>Hai un immobile che non si vende?</h4>
                     <p>
                       Appartamenti grandi, layout obsoleti, zero visite?
                       Parliamone. Trasformiamo il problema in opportunità.
@@ -105,7 +105,7 @@ const Contatti = () => {
                     <h4>Cerchi una collaborazione vincente?</h4>
                     <p>
                       Professionisti del settore, uniamo competenze per progetti
-                      ad alto rendimento.
+                      ad alto rendimento e soliditá sottostante.
                     </p>
                   </div>
                 </div>

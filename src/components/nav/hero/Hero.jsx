@@ -44,9 +44,10 @@ const Hero = () => {
             <br />a <span className="highlight">Opportunità Vincenti</span>
           </h1>
           <p className="hero-description">
-            Trasformiamo appartamenti di grandi dimensioni che nessuno vuole in
-            unità moderne che tutti cercano. Risultato garantito: più
-            vendibilità, più valore, più profitto.
+            Trasformiamo appartamenti di grandi dimensioni difficili da vendere
+            in appartamenti moderni e funzionali richiesti dal mercato attuale.{" "}
+            <br />
+            Risultato : velocità , valore , profitto
           </p>
           <div className="hero-buttons">
             <button
@@ -66,15 +67,15 @@ const Hero = () => {
 
         <div className="hero-stats">
           <div className="stat-item">
-            <h3>50+</h3>
+            <h3>20 +</h3>
             <p>Progetti di Successo</p>
           </div>
           <div className="stat-item">
-            <h3>6000mq</h3>
+            <h3>2000mq</h3>
             <p>Trasformati in Valore</p>
           </div>
           <div className="stat-item">
-            <h3>+40%</h3>
+            <h3>+ 34,16%</h3>
             <p>ROI Medio </p>
           </div>
         </div>

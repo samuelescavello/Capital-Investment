@@ -12,6 +12,66 @@ const Progetti = () => {
 
   const projectsCompletati = [
     {
+      id: 5,
+      title: "Piazza Stuparich",
+      location: "Milano, Piazza Stuparich",
+      status: "Completato",
+      mq: "180 mq",
+      piano: "3°",
+      investimento: "€ 435.000",
+      ricavato: "€ 773.000",
+      utile: "€ 338.000",
+      roi: "77,7%",
+      useRoe: true,
+      tempo: "12 mesi",
+      image: "/img/caroselloImg/stup-1.jpg",
+      units: [
+        {
+          name: "Unità 1",
+          mq: "45 mq",
+          photos: [
+            "/img/caroselloImg/stup-1.jpg",
+            "/img/caroselloImg/stup-2.jpg",
+            "/img/caroselloImg/stup-3.jpg",
+            "/img/caroselloImg/stup-4.jpg",
+            "/img/caroselloImg/stup-5.jpg",
+          ],
+        },
+        {
+          name: "Unità 2",
+          mq: "45 mq",
+          photos: [
+            "/img/caroselloImg/stup-6.jpg",
+            "/img/caroselloImg/stup-7.jpg",
+            "/img/caroselloImg/stup-8.jpg",
+            "/img/caroselloImg/stup-9.jpg",
+            "/img/caroselloImg/stup-10.jpg",
+          ],
+        },
+        {
+          name: "Unità 3",
+          mq: "45 mq",
+          photos: [
+            "/img/caroselloImg/stup-11.jpg",
+            "/img/caroselloImg/stup-12.jpg",
+            "/img/caroselloImg/stup-13.jpg",
+            "/img/caroselloImg/stup-14.jpg",
+          ],
+        },
+        {
+          name: "Unità 4",
+          mq: "45 mq",
+          photos: [
+            "/img/caroselloImg/stup-15.jpg",
+            "/img/caroselloImg/stup-16.jpg",
+            "/img/caroselloImg/stup-17.jpg",
+            "/img/caroselloImg/stup-18.jpg",
+            "/img/caroselloImg/stup-19.jpg",
+          ],
+        },
+      ],
+    },
+    {
       id: 1,
       title: "Via Elia",
       location: "Milano, Via Elia",
@@ -23,25 +83,17 @@ const Progetti = () => {
       utile: "€ 170.000",
       roi: "43,6%",
       tempo: "11 mesi",
-      image: "/img/caroselloImg/prog-1-slide-1.jpg",
+      image: "/img/caroselloImg/Placeholder.png",
       units: [
         {
           name: "Unità 1",
           mq: "40 mq",
-          photos: [
-            "/img/caroselloImg/prog-1-slide-1.jpg",
-            "/img/caroselloImg/prog-1-slide-2.jpg",
-            "/img/caroselloImg/prog-1-slide-3.jpg",
-          ],
+          photos: ["/img/caroselloImg/Placeholder.png"],
         },
         {
           name: "Unità 2",
           mq: "40 mq",
-          photos: [
-            "/img/caroselloImg/prog-1-slide-4.jpg",
-            "/img/caroselloImg/prog-1-slide-5.jpg",
-            "/img/caroselloImg/prog-1-slide-6.jpg",
-          ],
+          photos: ["/img/caroselloImg/Placeholder.png"],
         },
       ],
     },
@@ -57,16 +109,12 @@ const Progetti = () => {
       utile: "€ 40.000",
       roi: "23,5%",
       tempo: "2 mesi",
-      image: "/img/caroselloImg/prog-2-slide-5.jpg",
+      image: "/img/caroselloImg/Placeholder.png",
       units: [
         {
           name: "Unità 1",
           mq: "50 mq",
-          photos: [
-            "/img/caroselloImg/prog-2-slide-5.jpg",
-            "/img/caroselloImg/prog-2-slide-1.jpg",
-            "/img/caroselloImg/prog-2-slide-2.jpg",
-          ],
+          photos: ["/img/caroselloImg/Placeholder.png"],
         },
       ],
     },
@@ -82,31 +130,22 @@ const Progetti = () => {
       utile: "€ 247.000",
       roi: "41,9%",
       tempo: "12 mesi",
-      image: "/img/caroselloImg/prog-3-slide-1.jpg",
+      image: "/img/caroselloImg/Placeholder.png",
       units: [
         {
           name: "Unità 1",
           mq: "40 mq",
-          photos: [
-            "/img/caroselloImg/prog-3-slide-1.jpg",
-            "/img/caroselloImg/prog-3-slide-2.jpg",
-          ],
+          photos: ["/img/caroselloImg/Placeholder.png"],
         },
         {
           name: "Unità 2",
           mq: "40 mq",
-          photos: [
-            "/img/caroselloImg/prog-3-slide-3.jpg",
-            "/img/caroselloImg/prog-3-slide-4.jpg",
-          ],
+          photos: ["/img/caroselloImg/Placeholder.png"],
         },
         {
           name: "Unità 3",
           mq: "40 mq",
-          photos: [
-            "/img/caroselloImg/prog-3-slide-1.jpg",
-            "/img/caroselloImg/prog-3-slide-2.jpg",
-          ],
+          photos: ["/img/caroselloImg/Placeholder.png"],
         },
       ],
     },
@@ -122,87 +161,27 @@ const Progetti = () => {
       utile: "€ 291.000",
       roi: "26,5%",
       tempo: "11 mesi",
-      image: "/img/caroselloImg/prog-1-slide-1.jpg",
+      image: "/img/caroselloImg/Placeholder.png",
       units: [
         {
           name: "Unità 1",
           mq: "45 mq",
-          photos: [
-            "/img/caroselloImg/prog-1-slide-1.jpg",
-            "/img/caroselloImg/prog-1-slide-2.jpg",
-          ],
+          photos: ["/img/caroselloImg/Placeholder.png"],
         },
         {
           name: "Unità 2",
           mq: "45 mq",
-          photos: [
-            "/img/caroselloImg/prog-1-slide-3.jpg",
-            "/img/caroselloImg/prog-1-slide-4.jpg",
-          ],
+          photos: ["/img/caroselloImg/Placeholder.png"],
         },
         {
           name: "Unità 3",
           mq: "45 mq",
-          photos: [
-            "/img/caroselloImg/prog-1-slide-5.jpg",
-            "/img/caroselloImg/prog-1-slide-6.jpg",
-          ],
+          photos: ["/img/caroselloImg/Placeholder.png"],
         },
         {
           name: "Unità 4",
           mq: "45 mq",
-          photos: [
-            "/img/caroselloImg/prog-1-slide-7.jpg",
-            "/img/caroselloImg/prog-1-slide-8.jpg",
-          ],
-        },
-      ],
-    },
-    {
-      id: 5,
-      title: "Piazza Stuparich",
-      location: "Milano, Piazza Stuparich",
-      status: "Completato",
-      mq: "180 mq",
-      piano: "3°",
-      investimento: "€ 435.000",
-      ricavato: "€ 773.000",
-      utile: "€ 338.000",
-      roi: "77,7%",
-      tempo: "12 mesi",
-      image: "/img/caroselloImg/prog-1-slide-8.jpg",
-      units: [
-        {
-          name: "Unità 1",
-          mq: "45 mq",
-          photos: [
-            "/img/caroselloImg/prog-1-slide-8.jpg",
-            "/img/caroselloImg/prog-1-slide-9.jpg",
-          ],
-        },
-        {
-          name: "Unità 2",
-          mq: "45 mq",
-          photos: [
-            "/img/caroselloImg/prog-2-slide-1.jpg",
-            "/img/caroselloImg/prog-2-slide-2.jpg",
-          ],
-        },
-        {
-          name: "Unità 3",
-          mq: "45 mq",
-          photos: [
-            "/img/caroselloImg/prog-2-slide-3.jpg",
-            "/img/caroselloImg/prog-2-slide-4.jpg",
-          ],
-        },
-        {
-          name: "Unità 4",
-          mq: "45 mq",
-          photos: [
-            "/img/caroselloImg/prog-2-slide-5.jpg",
-            "/img/caroselloImg/prog-3-slide-1.jpg",
-          ],
+          photos: ["/img/caroselloImg/Placeholder.png"],
         },
       ],
     },
@@ -221,22 +200,22 @@ const Progetti = () => {
       utile: "€ 310.000",
       roi: "34,8%",
       tempo: "12 mesi",
-      image: "/img/caroselloImg/prog-3-slide-1.jpg",
+      image: "/img/caroselloImg/Placeholder.png",
       units: [
         {
           name: "Unità 1",
           mq: "47 mq",
-          photos: ["/img/caroselloImg/prog-3-slide-1.jpg"],
+          photos: ["/img/caroselloImg/Placeholder.png"],
         },
         {
           name: "Unità 2",
           mq: "47 mq",
-          photos: ["/img/caroselloImg/prog-3-slide-2.jpg"],
+          photos: ["/img/caroselloImg/Placeholder.png"],
         },
         {
           name: "Unità 3",
           mq: "46 mq",
-          photos: ["/img/caroselloImg/prog-3-slide-3.jpg"],
+          photos: ["/img/caroselloImg/Placeholder.png"],
         },
       ],
     },
@@ -252,27 +231,27 @@ const Progetti = () => {
       utile: "€ 260.000",
       roi: "26%",
       tempo: "10 mesi",
-      image: "/img/caroselloImg/prog-4-slide-1.jpeg",
+      image: "/img/caroselloImg/Placeholder.png",
       units: [
         {
           name: "Unità 1",
           mq: "45 mq",
-          photos: ["/img/caroselloImg/prog-4-slide-1.jpeg"],
+          photos: ["/img/caroselloImg/Placeholder.png"],
         },
         {
           name: "Unità 2",
           mq: "45 mq",
-          photos: ["/img/caroselloImg/prog-3-slide-4.jpg"],
+          photos: ["/img/caroselloImg/Placeholder.png"],
         },
         {
           name: "Unità 3",
           mq: "45 mq",
-          photos: ["/img/caroselloImg/prog-3-slide-1.jpg"],
+          photos: ["/img/caroselloImg/Placeholder.png"],
         },
         {
           name: "Unità 4",
           mq: "45 mq",
-          photos: ["/img/caroselloImg/prog-3-slide-2.jpg"],
+          photos: ["/img/caroselloImg/Placeholder.png"],
         },
       ],
     },
@@ -288,17 +267,17 @@ const Progetti = () => {
       utile: "€ 170.000",
       roi: "41,5%",
       tempo: "9 mesi",
-      image: "/img/caroselloImg/prog-2-slide-5.jpg",
+      image: "/img/caroselloImg/Placeholder.png",
       units: [
         {
           name: "Unità 1",
           mq: "40 mq",
-          photos: ["/img/caroselloImg/prog-2-slide-5.jpg"],
+          photos: ["/img/caroselloImg/Placeholder.png"],
         },
         {
           name: "Unità 2",
           mq: "40 mq",
-          photos: ["/img/caroselloImg/prog-2-slide-1.jpg"],
+          photos: ["/img/caroselloImg/Placeholder.png"],
         },
       ],
     },
@@ -314,17 +293,17 @@ const Progetti = () => {
       utile: "€ 170.000",
       roi: "43,6%",
       tempo: "9 mesi",
-      image: "/img/caroselloImg/prog-1-slide-1.jpg",
+      image: "/img/caroselloImg/Placeholder.png",
       units: [
         {
           name: "Unità 1",
           mq: "40 mq",
-          photos: ["/img/caroselloImg/prog-1-slide-1.jpg"],
+          photos: ["/img/caroselloImg/Placeholder.png"],
         },
         {
           name: "Unità 2",
           mq: "40 mq",
-          photos: ["/img/caroselloImg/prog-1-slide-2.jpg"],
+          photos: ["/img/caroselloImg/Placeholder.png"],
         },
       ],
     },
@@ -340,22 +319,22 @@ const Progetti = () => {
       utile: "€ 260.000",
       roi: "26%",
       tempo: "11 mesi",
-      image: "/img/caroselloImg/prog-3-slide-1.jpg",
+      image: "/img/caroselloImg/Placeholder.png",
       units: [
         {
           name: "Unità 1",
           mq: "73 mq",
-          photos: ["/img/caroselloImg/prog-3-slide-1.jpg"],
+          photos: ["/img/caroselloImg/Placeholder.png"],
         },
         {
           name: "Unità 2",
           mq: "73 mq",
-          photos: ["/img/caroselloImg/prog-3-slide-2.jpg"],
+          photos: ["/img/caroselloImg/Placeholder.png"],
         },
         {
           name: "Unità 3",
           mq: "74 mq",
-          photos: ["/img/caroselloImg/prog-3-slide-3.jpg"],
+          photos: ["/img/caroselloImg/Placeholder.png"],
         },
       ],
     },
@@ -467,20 +446,34 @@ const Progetti = () => {
                       </div>
 
                       <div className="roi-badge">
-                        <span className="roi-label">ROI</span>
-                        <span className="roi-value">{project.roi}</span>
+                        <span className="roi-label">
+                          {project.useRoe ? "ROE" : "ROI"}
+                        </span>
+                        <span className="roi-value">***</span>
                       </div>
 
                       <div className="project-overlay-progetti">
                         <h3>{project.location}</h3>
                         <div className="overlay-stats">
                           <div className="overlay-stat-item">
-                            <span>Investimento</span>
+                            <span>
+                              {project.useRoe ? "Investimento" : "Investimento"}
+                            </span>
                             <strong>{project.investimento}</strong>
                           </div>
                           <div className="overlay-stat-item">
                             <span>Tempistica</span>
                             <strong>{project.tempo}</strong>
+                          </div>
+                          <div className="overlay-stat-item">
+                            <span>Unità</span>
+                            <strong className="censored-value">***</strong>
+                          </div>
+                          <div className="overlay-stat-item">
+                            <span>Altri Costi</span>
+                            <strong className="censored-value">
+                              € ***. ***
+                            </strong>
                           </div>
                           <div className="overlay-stat-item">
                             <span>Ricavato</span>
@@ -530,50 +523,39 @@ const Progetti = () => {
             </button>
 
             <div className="modal-grid-progetti">
-              {/* Left: Units Gallery */}
+              {/* Left: Gallery */}
               <div className="modal-gallery-progetti">
-                {/* Unit Tabs */}
-                <div className="unit-tabs">
-                  {selectedProject.units.map((unit, index) => (
-                    <button
-                      key={index}
-                      className={`unit-tab ${activeUnit === index ? "active" : ""}`}
-                      onClick={() => switchUnit(index)}
-                    >
-                      <span className="unit-tab-name">{unit.name}</span>
-                      <span className="unit-tab-mq">{unit.mq}</span>
-                    </button>
-                  ))}
-                </div>
-
                 {/* Main Image */}
                 <div className="main-image-progetti">
                   <img
-                    src={
-                      selectedProject.units[activeUnit].photos[
-                        selectedImageIndex
-                      ] || selectedProject.units[activeUnit].photos[0]
-                    }
-                    alt={`${selectedProject.title} - ${selectedProject.units[activeUnit].name}`}
+                    src={(() => {
+                      const allPhotos = selectedProject.units.flatMap(
+                        (u) => u.photos,
+                      );
+                      return allPhotos[selectedImageIndex] || allPhotos[0];
+                    })()}
+                    alt={selectedProject.title}
                   />
                   <div className="image-counter">
                     {selectedImageIndex + 1} /{" "}
-                    {selectedProject.units[activeUnit].photos.length}
+                    {selectedProject.units.flatMap((u) => u.photos).length}
                   </div>
                 </div>
 
                 {/* Thumbnails */}
-                {selectedProject.units[activeUnit].photos.length > 1 && (
+                {selectedProject.units.flatMap((u) => u.photos).length > 1 && (
                   <div className="gallery-thumbs-progetti">
-                    {selectedProject.units[activeUnit].photos.map((img, i) => (
-                      <img
-                        key={i}
-                        src={img}
-                        alt={`${selectedProject.units[activeUnit].name} - foto ${i + 1}`}
-                        onClick={() => setSelectedImageIndex(i)}
-                        className={selectedImageIndex === i ? "active" : ""}
-                      />
-                    ))}
+                    {selectedProject.units
+                      .flatMap((u) => u.photos)
+                      .map((img, i) => (
+                        <img
+                          key={i}
+                          src={img}
+                          alt={`foto ${i + 1}`}
+                          onClick={() => setSelectedImageIndex(i)}
+                          className={selectedImageIndex === i ? "active" : ""}
+                        />
+                      ))}
                   </div>
                 )}
               </div>
@@ -587,7 +569,7 @@ const Progetti = () => {
                     {selectedProject.status}
                   </span>
                   <span className="modal-units-count">
-                    {selectedProject.units.length} unità
+                    <span className="censored-value">***</span> unità
                   </span>
                 </div>
 
@@ -601,10 +583,10 @@ const Progetti = () => {
                 {/* Key Data */}
                 <div className="modal-key-data">
                   <div className="key-data-item highlight">
-                    <span className="key-data-label">ROI</span>
-                    <span className="key-data-value gold">
-                      {selectedProject.roi}
+                    <span className="key-data-label">
+                      {selectedProject.useRoe ? "ROE" : "ROI"}
                     </span>
+                    <span className="key-data-value gold">***</span>
                   </div>
                   <div className="key-data-item">
                     <span className="key-data-label">Investimento</span>
@@ -640,8 +622,8 @@ const Progetti = () => {
                   </div>
                   <div className="detail-item-progetti">
                     <span className="detail-label-progetti">N° Unità</span>
-                    <span className="detail-value-progetti">
-                      {selectedProject.units.length}
+                    <span className="detail-value-progetti censored-value">
+                      ***
                     </span>
                   </div>
                 </div>

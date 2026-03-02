@@ -3,33 +3,33 @@ const ComeFunziona = () => {
   const steps = [
     {
       number: "01",
-      title: "Selezione Strategica",
+      title: "Strategia",
       description:
-        "Acquistiamo appartamenti di grandi dimensioni che altri considerano problematici. Per noi sono diamanti grezzi.",
+        "Acquistiamo appartamenti di grandi dimensioni, difficili da vendere e ne ricaviamo il massimo potenziale.",
     },
     {
       number: "02",
-      title: "Analisi Vincente",
+      title: "Analisi Dettagliata",
       description:
-        "Studio completo: urbanistica, mercato, margini. Zero improvvisazione. Solo numeri che funzionano.",
+        "Studio completo su tutti gli aspetti: urbanistica , analisi mercato, computo metrico lavori. Zero improvvisazione. Solo studio maniacale dei dati.",
     },
     {
       number: "03",
       title: "Progettazione Intelligente",
       description:
-        "Riprogettazione completa: da uno spazio obsoleto a più unità moderne che il mercato cerca davvero.",
+        "Riprogettazione completa: da uno spazio obsoleto con spazi sprecati  ad unità moderne , funzionali e in linea con le esigenze del mercato.",
     },
     {
       number: "04",
       title: "Ristrutturazione Premium",
       description:
-        "Materiali di qualità, esecuzione impeccabile. Creiamo case che vendono, non solo belle foto.",
+        "Materiali di qualità, esecuzione impeccabile e velocità superiore alla media grazie alla partnership con RISTRUTTURAZIONI PRO, simbolo di garanzia sui cantieri. Creiamo case pensate per durare nel tempo.",
     },
     {
       number: "05",
-      title: "Profitto Garantito",
+      title: "Profitti Invidiabili",
       description:
-        "Unità pronte, appetibili, vendibili. ROI medio del 40%. I numeri parlano chiaro.",
+        "Tempi e costi certi, appartamenti appetibili e velocemente vendibili. ROI medio del 34%. I numeri parlano chiaro.",
     },
   ];
 

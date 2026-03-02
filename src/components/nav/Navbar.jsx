@@ -13,6 +13,17 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [menuOpen]);
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -22,43 +33,53 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
-      <div className="navbar-container">
-        <div className="navbar-logo">
-          <h2>Capital Investment</h2>
-        </div>
+    <>
+      <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
+        <div className="navbar-container">
+          <div className="navbar-logo">
+            <h2>Capital Investment</h2>
+          </div>
 
-        <div className={`navbar-menu ${menuOpen ? "active" : ""}`}>
-          <a onClick={() => scrollToSection("home")} className="nav-link">
-            Home
-          </a>
-          <a
-            onClick={() => scrollToSection("come-funziona")}
-            className="nav-link"
+          <div className={`navbar-menu ${menuOpen ? "active" : ""}`}>
+            <a onClick={() => scrollToSection("home")} className="nav-link">
+              Home
+            </a>
+            <a
+              onClick={() => scrollToSection("come-funziona")}
+              className="nav-link"
+            >
+              Come Funziona
+            </a>
+            <a onClick={() => scrollToSection("progetti")} className="nav-link">
+              Progetti
+            </a>
+            <a
+              onClick={() => scrollToSection("chi-siamo")}
+              className="nav-link"
+            >
+              Chi Siamo
+            </a>
+            <a onClick={() => scrollToSection("contatti")} className="nav-link">
+              Contatti
+            </a>
+          </div>
+
+          <div
+            className={`hamburger ${menuOpen ? "active" : ""}`}
+            onClick={() => setMenuOpen(!menuOpen)}
           >
-            Come Funziona
-          </a>
-          <a onClick={() => scrollToSection("progetti")} className="nav-link">
-            Progetti
-          </a>
-          <a onClick={() => scrollToSection("chi-siamo")} className="nav-link">
-            Chi Siamo
-          </a>
-          <a onClick={() => scrollToSection("contatti")} className="nav-link">
-            Contatti
-          </a>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
+      </nav>
 
-        <div
-          className={`hamburger ${menuOpen ? "active" : ""}`}
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </nav>
+      {/* Overlay per chiudere il menu cliccando fuori */}
+      {menuOpen && (
+        <div className="menu-overlay" onClick={() => setMenuOpen(false)}></div>
+      )}
+    </>
   );
 };
 

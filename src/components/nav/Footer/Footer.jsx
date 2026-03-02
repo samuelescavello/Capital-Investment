@@ -1,19 +1,7 @@
-import { useState } from "react";
 import "./Footer.css";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const [emailFooter, setEmailFooter] = useState("");
-  const [footerSent, setFooterSent] = useState(false);
-
-  const handleFooterSubmit = (e) => {
-    e.preventDefault();
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (emailFooter.trim() && emailRegex.test(emailFooter)) {
-      console.log("Newsletter email:", emailFooter);
-      setFooterSent(true);
-    }
-  };
 
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
@@ -137,46 +125,12 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
-          {/* Newsletter */}
-          <div className="footer-newsletter">
-            <h4 className="footer-heading">Resta Aggiornato</h4>
-            <p>
-              Ricevi aggiornamenti sui nuovi progetti e opportunità di
-              investimento.
-            </p>
-            {!footerSent ? (
-              <div className="footer-form-wrapper">
-                <input
-                  type="email"
-                  placeholder="La tua email"
-                  value={emailFooter}
-                  onChange={(e) => setEmailFooter(e.target.value)}
-                  className="footer-email-input"
-                />
-                <button
-                  className="footer-submit-btn"
-                  onClick={handleFooterSubmit}
-                >
-                  →
-                </button>
-              </div>
-            ) : (
-              <p className="footer-form-success">✓ Iscrizione completata!</p>
-            )}
-            <span className="footer-privacy-note">
-              Iscrivendoti accetti la nostra{" "}
-              <a href="/privacy-policy">Privacy Policy</a>
-            </span>
-          </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="footer-bottom">
           <div className="footer-bottom-left">
-            <span>
-              © {currentYear} Capital Investment. Tutti i diritti riservati.
-            </span>
+            <span>© {currentYear} YourBrand. Tutti i diritti riservati.</span>
           </div>
           <div className="footer-bottom-right">
             <a href="/privacy-policy">Privacy Policy</a>
