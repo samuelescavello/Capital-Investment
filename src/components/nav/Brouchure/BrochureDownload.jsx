@@ -26,7 +26,7 @@ const BrochureDownload = () => {
 
     emailjs
       .send(
-        "service_d1sfgnd",
+        "service_bcrx93c",
         "template_s3d3mhc",
         {
           user_email: email,

@@ -36,7 +36,7 @@ const Contatti = () => {
 
     emailjs
       .send(
-        "service_d1sfgnd",
+        "service_bcrx93c",
         "template_97o1yad",
         {
           nome: formData.nome,
