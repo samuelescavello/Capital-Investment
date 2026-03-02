@@ -2,6 +2,8 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./BrochureDownload.css";
 
+emailjs.init("4J2sIUHJ4aJXglfyb");
+
 const BrochureDownload = () => {
   const [email, setEmail] = useState("");
   const [sent, setSent] = useState(false);
@@ -25,20 +27,16 @@ const BrochureDownload = () => {
     }
 
     emailjs
-      .send(
-        "service_bcrx93c",
-        "template_s3d3mhc",
-        {
-          user_email: email,
-          project_name: "Richiesta generale",
-          date: new Date().toLocaleDateString("it-IT"),
-        },
-        "L7Em7zdMVTy5cq4YpZm17",
-      )
+      .send("service_bcrx93c", "template_s3d3mhc", {
+        user_email: email,
+        project_name: "Richiesta generale",
+        date: new Date().toLocaleDateString("it-IT"),
+      })
       .then(() => {
         setSent(true);
       })
-      .catch(() => {
+      .catch((err) => {
+        console.log("ERRORE EMAILJS:", err);
         setError("Errore nell'invio. Riprova più tardi.");
       });
   };

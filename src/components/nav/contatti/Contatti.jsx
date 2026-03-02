@@ -2,6 +2,8 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./Contatti.css";
 
+emailjs.init("4J2sIUHJ4aJXglfyb");
+
 const Contatti = () => {
   const [formData, setFormData] = useState({
     nome: "",
@@ -35,18 +37,13 @@ const Contatti = () => {
     e.preventDefault();
 
     emailjs
-      .send(
-        "service_bcrx93c",
-        "template_97o1yad",
-        {
-          nome: formData.nome,
-          email: formData.email,
-          telefono: formData.telefono || "Non fornito",
-          tipo: formData.tipo,
-          messaggio: formData.messaggio,
-        },
-        "L7Em7zdMVTy5cq4YpZm17",
-      )
+      .send("service_bcrx93c", "template_97o1yad", {
+        nome: formData.nome,
+        email: formData.email,
+        telefono: formData.telefono || "Non fornito",
+        tipo: formData.tipo,
+        messaggio: formData.messaggio,
+      })
       .then(() => {
         showNotification(
           "success",
@@ -60,7 +57,8 @@ const Contatti = () => {
           messaggio: "",
         });
       })
-      .catch(() => {
+      .catch((err) => {
+        console.log("ERRORE EMAILJS:", err);
         showNotification(
           "error",
           "Si è verificato un errore. Riprova o contattaci via email.",

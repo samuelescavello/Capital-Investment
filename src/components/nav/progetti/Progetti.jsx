@@ -2,6 +2,8 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./Progetti.css";
 
+emailjs.init("4J2sIUHJ4aJXglfyb");
+
 const Progetti = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [selectedProject, setSelectedProject] = useState(null);
@@ -397,20 +399,16 @@ const Progetti = () => {
 
     console.log("Invio brochure...");
     emailjs
-      .send(
-        "service_bcrx93c",
-        "template_s3d3mhc",
-        {
-          user_email: email,
-          project_name: selectedProject.title,
-          date: new Date().toLocaleDateString("it-IT"),
-        },
-        "L7Em7zdMVTy5cq4YpZm17",
-      )
+      .send("service_bcrx93c", "template_s3d3mhc", {
+        user_email: email,
+        project_name: selectedProject.title,
+        date: new Date().toLocaleDateString("it-IT"),
+      })
       .then(() => {
         setEmailSent(true);
       })
-      .catch(() => {
+      .catch((err) => {
+        console.log("ERRORE EMAILJS:", err);
         setEmailError("Errore nell'invio. Riprova più tardi.");
       });
   };
