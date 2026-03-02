@@ -1,0 +1,281 @@
+/* BrochureDownload.css */
+.brochure-section {
+  padding: 6rem 0;
+  background: #0d0d0d;
+  position: relative;
+  overflow: hidden;
+}
+
+.brochure-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at 30% 50%,
+    rgba(201, 169, 97, 0.06) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.brochure-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.brochure-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Left Text */
+.brochure-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.brochure-subtitle {
+  color: #c9a961;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.brochure-title {
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: -1px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.brochure-desc {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.brochure-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.brochure-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.highlight-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* Right Form Card */
+.brochure-form-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #222 100%);
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(201, 169, 97, 0.2);
+}
+
+.brochure-form-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.5rem 0;
+}
+
+.brochure-form-card > p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 1.5rem 0;
+  line-height: 1.5;
+}
+
+.brochure-input-wrapper {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.brochure-input {
+  flex: 1;
+  padding: 0.9rem 1.2rem;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.brochure-input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.brochure-input:focus {
+  border-color: #c9a961;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.brochure-input.input-error {
+  border-color: #e74c3c;
+}
+
+.brochure-btn {
+  padding: 0.9rem 2rem;
+  background: #c9a961;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.brochure-btn:hover {
+  background: #b8953e;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(201, 169, 97, 0.4);
+}
+
+/* Privacy */
+.brochure-privacy {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.brochure-privacy input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  accent-color: #c9a961;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.brochure-privacy span {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.4;
+}
+
+.brochure-privacy a {
+  color: #c9a961;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.brochure-privacy a:hover {
+  color: #fff;
+}
+
+.brochure-form-error {
+  display: block;
+  color: #e74c3c;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+/* Success */
+.brochure-sent {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.brochure-sent-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  background: #c9a961;
+  color: white;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.brochure-sent h3 {
+  color: #fff;
+  margin: 0 0 0.5rem 0;
+}
+
+.brochure-sent p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.brochure-sent p strong {
+  color: #c9a961;
+}
+
+/* ======================== */
+/* RESPONSIVE               */
+/* ======================== */
+@media (max-width: 968px) {
+  .brochure-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .brochure-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .brochure-section {
+    padding: 4rem 0;
+  }
+
+  .brochure-container {
+    padding: 0 1.25rem;
+  }
+
+  .brochure-title {
+    font-size: 1.8rem;
+  }
+
+  .brochure-form-card {
+    padding: 1.5rem;
+  }
+
+  .brochure-input-wrapper {
+    flex-direction: column;
+  }
+
+  .brochure-btn {
+    width: 100%;
+  }
+
+  .brochure-highlights {
+    gap: 0.5rem;
+  }
+}

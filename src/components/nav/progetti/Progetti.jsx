@@ -9,6 +9,7 @@ const Progetti = () => {
   const [email, setEmail] = useState("");
   const [emailSent, setEmailSent] = useState(false);
   const [emailError, setEmailError] = useState("");
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
 
   const projectsCompletati = [
     {
@@ -359,6 +360,7 @@ const Progetti = () => {
     setEmail("");
     setEmailSent(false);
     setEmailError("");
+    setPrivacyAccepted(false);
     document.body.style.overflow = "hidden";
   };
 
@@ -385,6 +387,10 @@ const Progetti = () => {
     }
     if (!emailRegex.test(email)) {
       setEmailError("Inserisci un'email valida");
+      return;
+    }
+    if (!privacyAccepted) {
+      setEmailError("Devi accettare la privacy policy");
       return;
     }
 
@@ -674,6 +680,27 @@ const Progetti = () => {
                           Invia
                         </button>
                       </div>
+                      <label className="brochure-privacy-checkbox">
+                        <input
+                          type="checkbox"
+                          checked={privacyAccepted}
+                          onChange={(e) => {
+                            setPrivacyAccepted(e.target.checked);
+                            setEmailError("");
+                          }}
+                        />
+                        <span>
+                          Accetto la{" "}
+                          <a
+                            href="/privacy-policy"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Privacy Policy
+                          </a>{" "}
+                          e acconsento al trattamento dei miei dati personali
+                        </span>
+                      </label>
                       {emailError && (
                         <span className="brochure-error">{emailError}</span>
                       )}

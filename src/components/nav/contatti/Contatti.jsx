@@ -125,7 +125,7 @@ const Contatti = () => {
                 <div className="info-icon">📧</div>
                 <div className="info-text">
                   <h4>Email</h4>
-                  <p>info@capitalinvestment.it</p>
+                  <p>amministrazione@capitalinvestmentmilano.it</p>
                 </div>
               </div>
             </div>

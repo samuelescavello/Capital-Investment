@@ -759,6 +759,40 @@
   padding-left: 0.2rem;
 }
 
+/* Privacy Checkbox */
+.brochure-privacy-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+  cursor: pointer;
+}
+
+.brochure-privacy-checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  accent-color: #c9a961;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.brochure-privacy-checkbox span {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.4;
+}
+
+.brochure-privacy-checkbox a {
+  color: #c9a961;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.brochure-privacy-checkbox a:hover {
+  color: #fff;
+}
+
 /* Success */
 .brochure-success {
   text-align: center;

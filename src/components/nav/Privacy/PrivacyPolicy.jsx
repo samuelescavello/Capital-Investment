@@ -24,10 +24,11 @@ const PrivacyPolicy = () => {
             <h2>1. Titolare del Trattamento</h2>
             <p>
               Il Titolare del trattamento dei dati personali è{" "}
-              <strong>[Nome Azienda / Ragione Sociale]</strong>, con sede legale
-              in <strong>[Indirizzo completo]</strong>, P.IVA{" "}
-              <strong>[Numero P.IVA]</strong>, email:{" "}
-              <strong>[email@azienda.it]</strong> (di seguito "Titolare").
+              <strong>Capital Investment Milano</strong>, con sede legale in{" "}
+              <strong>Via Venezuela 4, 20151 Milano (MI)</strong>, C.F. e n.
+              iscr. Registro Imprese <strong>13976270960</strong>, email:{" "}
+              <strong>amministrazione@capitalinvestmentmilano.it</strong> (di
+              seguito "Titolare").
             </p>
           </section>
 
@@ -165,7 +166,7 @@ const PrivacyPolicy = () => {
             <p>
               Per esercitare tali diritti, l'utente può inviare una richiesta
               all'indirizzo email:
-              <strong> [email@azienda.it]</strong>.
+              <strong> amministrazione@capitalinvestmentmilano.it</strong>.
             </p>
             <p>
               L'utente ha inoltre il diritto di proporre reclamo all'Autorità
