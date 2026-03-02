@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import "./Progetti.css";
 
 const Progetti = () => {
@@ -394,8 +395,24 @@ const Progetti = () => {
       return;
     }
 
-    console.log("Email inviata:", email, "Progetto:", selectedProject.title);
-    setEmailSent(true);
+    console.log("Invio brochure...");
+    emailjs
+      .send(
+        "service_d1sfgnd",
+        "template_s3d3mhc",
+        {
+          user_email: email,
+          project_name: selectedProject.title,
+          date: new Date().toLocaleDateString("it-IT"),
+        },
+        "L7Em7zdMVTy5cq4YpZm17",
+      )
+      .then(() => {
+        setEmailSent(true);
+      })
+      .catch(() => {
+        setEmailError("Errore nell'invio. Riprova più tardi.");
+      });
   };
 
   return (

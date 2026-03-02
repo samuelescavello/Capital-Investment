@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import "./BrochureDownload.css";
 
 const BrochureDownload = () => {
@@ -23,8 +24,23 @@ const BrochureDownload = () => {
       return;
     }
 
-    console.log("Brochure richiesta:", email);
-    setSent(true);
+    emailjs
+      .send(
+        "service_d1sfgnd",
+        "template_s3d3mhc",
+        {
+          user_email: email,
+          project_name: "Richiesta generale",
+          date: new Date().toLocaleDateString("it-IT"),
+        },
+        "L7Em7zdMVTy5cq4YpZm17",
+      )
+      .then(() => {
+        setSent(true);
+      })
+      .catch(() => {
+        setError("Errore nell'invio. Riprova più tardi.");
+      });
   };
 
   return (

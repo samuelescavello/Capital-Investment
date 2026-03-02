@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import "./Contatti.css";
 
 const Contatti = () => {
@@ -12,7 +13,7 @@ const Contatti = () => {
 
   const [notification, setNotification] = useState({
     show: false,
-    type: "", // 'success' o 'error'
+    type: "",
     message: "",
   });
 
@@ -33,29 +34,38 @@ const Contatti = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Simulazione invio (qui andrà la tua logica reale)
-    try {
-      console.log("Form inviato:", formData);
-
-      showNotification(
-        "success",
-        "Grazie per averci contattato! Ti risponderemo entro 24 ore.",
-      );
-
-      // Reset form
-      setFormData({
-        nome: "",
-        email: "",
-        telefono: "",
-        tipo: "agenzia",
-        messaggio: "",
+    emailjs
+      .send(
+        "service_d1sfgnd",
+        "template_97o1yad",
+        {
+          nome: formData.nome,
+          email: formData.email,
+          telefono: formData.telefono || "Non fornito",
+          tipo: formData.tipo,
+          messaggio: formData.messaggio,
+        },
+        "L7Em7zdMVTy5cq4YpZm17",
+      )
+      .then(() => {
+        showNotification(
+          "success",
+          "Grazie per averci contattato! Ti risponderemo entro 24 ore.",
+        );
+        setFormData({
+          nome: "",
+          email: "",
+          telefono: "",
+          tipo: "agenzia",
+          messaggio: "",
+        });
+      })
+      .catch(() => {
+        showNotification(
+          "error",
+          "Si è verificato un errore. Riprova o contattaci via email.",
+        );
       });
-    } catch (error) {
-      showNotification(
-        "error",
-        "Si è verificato un errore. Riprova o contattaci via email.",
-      );
-    }
   };
 
   return (
@@ -117,7 +127,7 @@ const Contatti = () => {
                 <div className="info-icon">📍</div>
                 <div className="info-text">
                   <h4>Sede</h4>
-                  <p>Milano, Italia</p>
+                  <p>Via Venezuela 4, 20151 Milano (MI)</p>
                 </div>
               </div>
 
@@ -215,7 +225,14 @@ const Contatti = () => {
               </button>
 
               <p className="privacy-note">
-                Inviando questo form accetti la nostra informativa sulla privacy
+                Inviando questo form accetti la nostra{" "}
+                <a
+                  href="/privacy-policy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  informativa sulla privacy
+                </a>
               </p>
             </form>
           </div>
