@@ -334,7 +334,9 @@
 }
 
 .footer-logo-img {
-  height: 30px;
+  height: 42px;
   width: auto;
   display: block;
+  /* Il logo SVG è scuro: lo rendiamo bianco sullo sfondo scuro del footer */
+  filter: brightness(0) invert(1);
 }
