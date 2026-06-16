@@ -21,7 +21,11 @@ const Footer = () => {
           {/* Brand */}
           <div className="footer-brand">
             <h3 className="footer-logo">
-              <span className="logo-accent">Capital Investment Milano</span>
+              <img
+                src="/logo-verticale.svg"
+                alt="Capital Investment Milano"
+                className="footer-logo-img"
+              />
             </h3>
             <p className="footer-tagline">
               Investimenti immobiliari a Milano. Trasformiamo immobili in

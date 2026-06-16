@@ -332,3 +332,9 @@
     justify-content: center;
   }
 }
+
+.footer-logo-img {
+  height: 30px;
+  width: auto;
+  display: block;
+}

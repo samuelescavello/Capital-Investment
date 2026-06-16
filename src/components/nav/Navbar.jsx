@@ -37,7 +37,11 @@ const Navbar = () => {
       <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
         <div className="navbar-container">
           <div className="navbar-logo">
-            <h2>Capital Investment</h2>
+            <img
+              src="/logo-verticale.svg"
+              alt="Capital Investment Milano"
+              className="navbar-logo-img"
+            />
           </div>
 
           <div className={`navbar-menu ${menuOpen ? "active" : ""}`}>
