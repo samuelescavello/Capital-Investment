@@ -969,3 +969,87 @@
     text-align: center;
   }
 }
+
+@media (max-width: 768px) {
+  .li-numeri-row {
+    grid-template-columns: 1fr 1fr;
+  }
+  .li-section,
+  .li-form-sec {
+    padding: 56px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .li-nav {
+    padding: 14px 18px;
+  }
+  .li-logo {
+    font-size: 20px;
+  }
+  .li-nav-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+  .li-hero-left {
+    padding: 56px 18px 44px;
+  }
+  .li-hero h1 {
+    font-size: 36px;
+  }
+  .li-section,
+  .li-form-sec {
+    padding: 48px 18px;
+  }
+  .li-title {
+    font-size: 28px;
+  }
+  .li-strip {
+    flex-wrap: wrap;
+    padding: 14px 18px;
+    gap: 10px 18px;
+    font-size: 12px;
+  }
+  .li-numeri-row {
+    grid-template-columns: 1fr;
+  }
+  .li-num-big {
+    font-size: 56px;
+  }
+  .li-strategia-toggle {
+    grid-template-columns: 1fr;
+  }
+  .li-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .li-form-box {
+    padding: 24px 16px;
+  }
+}
+
+.li-f-privacy {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 4px 0 4px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #555;
+  text-align: left;
+  cursor: pointer;
+}
+
+.li-f-privacy input[type="checkbox"] {
+  margin-top: 3px;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.li-f-privacy a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+}

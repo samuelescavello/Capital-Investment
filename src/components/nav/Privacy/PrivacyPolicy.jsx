@@ -27,7 +27,7 @@ const PrivacyPolicy = () => {
               <strong>Capital Investment Milano</strong>, con sede legale in{" "}
               <strong>Via Venezuela 4, 20151 Milano (MI)</strong>, C.F. e n.
               iscr. Registro Imprese <strong>13976270960</strong>, email:{" "}
-              <strong>amministrazione@capitalinvestmentmilano.it</strong> (di
+              <strong>info@capinvestment.it</strong> (di
               seguito "Titolare").
             </p>
           </section>
@@ -166,7 +166,7 @@ const PrivacyPolicy = () => {
             <p>
               Per esercitare tali diritti, l'utente può inviare una richiesta
               all'indirizzo email:
-              <strong> amministrazione@capitalinvestmentmilano.it</strong>.
+              <strong> info@capinvestment.it</strong>.
             </p>
             <p>
               L'utente ha inoltre il diritto di proporre reclamo all'Autorità

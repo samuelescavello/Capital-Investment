@@ -17,6 +17,7 @@ const LandingConsulenza = () => {
   });
   const [sent, setSent] = useState(false);
   const [error, setError] = useState("");
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const revealRefs = useRef([]);
 
   useEffect(() => {
@@ -52,6 +53,10 @@ const LandingConsulenza = () => {
     setError("");
     if (!formData.nome || !formData.email) {
       setError("Compila almeno nome e email.");
+      return;
+    }
+    if (!privacyAccepted) {
+      setError("Devi accettare la Privacy Policy per proseguire.");
       return;
     }
     emailjs
@@ -431,6 +436,27 @@ const LandingConsulenza = () => {
                   placeholder="Quante stanze ti servono? Hai esigenze specifiche?"
                 ></textarea>
               </div>
+              <label className="lc-f-privacy">
+                <input
+                  type="checkbox"
+                  checked={privacyAccepted}
+                  onChange={(e) => {
+                    setPrivacyAccepted(e.target.checked);
+                    setError("");
+                  }}
+                />
+                <span>
+                  Accetto la{" "}
+                  <a
+                    href="/privacy-policy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Privacy Policy
+                  </a>{" "}
+                  e il trattamento dei miei dati personali
+                </span>
+              </label>
               <button className="lc-f-submit" onClick={handleSubmit}>
                 Richiedi consulenza gratuita →
               </button>
@@ -460,7 +486,7 @@ const LandingConsulenza = () => {
         <div className="lc-f-info">
           📍 Via Venezuela 4, 20151 Milano (MI)
           <br />
-          ✉️ amministrazione@capitalinvestmentmilano.it
+          ✉️ info@capinvestment.it
           <br />
           C.F. 13976270960 · © {new Date().getFullYear()} Casasumisura
         </div>

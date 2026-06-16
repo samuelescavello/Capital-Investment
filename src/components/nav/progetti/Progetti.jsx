@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import "./Progetti.css";
 
@@ -7,12 +7,19 @@ emailjs.init("4J2sIUHJ4aJXglfyb");
 const Progetti = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [selectedProject, setSelectedProject] = useState(null);
-  const [activeUnit, setActiveUnit] = useState(0);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [email, setEmail] = useState("");
   const [emailSent, setEmailSent] = useState(false);
   const [emailError, setEmailError] = useState("");
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
+
+  // Blocca lo scroll del body quando il modal è aperto
+  useEffect(() => {
+    document.body.style.overflow = selectedProject ? "hidden" : "auto";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [selectedProject]);
 
   const projectsCompletati = [
     {
@@ -358,24 +365,15 @@ const Progetti = () => {
 
   const openModal = (project) => {
     setSelectedProject(project);
-    setActiveUnit(0);
     setSelectedImageIndex(0);
     setEmail("");
     setEmailSent(false);
     setEmailError("");
     setPrivacyAccepted(false);
-    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
     setSelectedProject(null);
-    setActiveUnit(0);
-    setSelectedImageIndex(0);
-    document.body.style.overflow = "auto";
-  };
-
-  const switchUnit = (index) => {
-    setActiveUnit(index);
     setSelectedImageIndex(0);
   };
 

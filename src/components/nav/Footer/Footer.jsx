@@ -21,7 +21,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="footer-brand">
             <h3 className="footer-logo">
-              <span className="logo-accent">Capital Investment</span>
+              <span className="logo-accent">Capital Investment Milano</span>
             </h3>
             <p className="footer-tagline">
               Investimenti immobiliari a Milano. Trasformiamo immobili in
@@ -34,7 +34,7 @@ const Footer = () => {
             <h4 className="footer-heading">Navigazione</h4>
             <ul>
               <li>
-                <button onClick={() => scrollToSection("hero")}>Home</button>
+                <button onClick={() => scrollToSection("home")}>Home</button>
               </li>
               <li>
                 <button onClick={() => scrollToSection("come-funziona")}>
@@ -65,12 +65,12 @@ const Footer = () => {
             <ul>
               <li>
                 <span className="contact-icon">📍</span>
-                Milano, Italia
+                Via Venezuela 4, 20151 Milano (MI)
               </li>
               <li>
                 <span className="contact-icon">✉️</span>
-                <a href="mailto:amministrazione@capitalinvestmentmilano.it">
-                  amministrazione@capitalinvestmentmilano.it
+                <a href="mailto:info@capinvestment.it">
+                  info@capinvestment.it
                 </a>
               </li>
             </ul>
@@ -81,13 +81,14 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="footer-bottom-left">
             <span>
-              © {currentYear} Capital Investment. Tutti i diritti riservati.
+              © {currentYear} Capital Investment Milano. Tutti i diritti
+              riservati.
             </span>
           </div>
           <div className="footer-bottom-right">
             <a href="/privacy-policy">Privacy Policy</a>
             <span className="footer-bottom-divider">|</span>
-            <a href="/privacy-policy">Cookie Policy</a>
+            <a href="/cookie-policy">Cookie Policy</a>
             <span className="footer-bottom-divider">|</span>
             <span>C.F. 13976270960</span>
           </div>

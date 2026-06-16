@@ -9,9 +9,11 @@ import ChiSiamo from "./components/nav/chiSiamo/ChiSiamo";
 import Contatti from "./components/nav/contatti/Contatti";
 import Footer from "./components/nav/Footer/Footer";
 import PrivacyPolicy from "./components/nav/Privacy/PrivacyPolicy";
+import CookiePolicy from "./components/nav/CookiePolicy/CookiePolicy";
 import LandingConsulenza from "./components/nav/landing/LandingConsulenza";
 import LandingRendimento from "./components/nav/landing/LandingRendimento";
 import LandingInvestimento from "./components/nav/landing/LandingInvestimento";
+import CookieBanner from "./components/nav/CookieBanner/CookieBanner";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
@@ -21,6 +23,8 @@ function App() {
       const path = window.location.pathname;
       if (path === "/privacy-policy") {
         setCurrentPage("privacy");
+      } else if (path === "/cookie-policy") {
+        setCurrentPage("cookie");
       } else if (path === "/casasumisura") {
         setCurrentPage("consulenza");
       } else if (path === "/rendimento") {
@@ -37,29 +41,47 @@ function App() {
     return () => window.removeEventListener("popstate", handleRoute);
   }, []);
 
-  if (currentPage === "privacy") {
+  const renderPage = () => {
+    if (currentPage === "privacy") {
+      return (
+        <>
+          <PrivacyPolicy />
+          <Footer />
+        </>
+      );
+    }
+
+    if (currentPage === "cookie") {
+      return (
+        <>
+          <CookiePolicy />
+          <Footer />
+        </>
+      );
+    }
+
+    if (currentPage === "consulenza") return <LandingConsulenza />;
+    if (currentPage === "rendimento") return <LandingRendimento />;
+    if (currentPage === "investimento") return <LandingInvestimento />;
+
     return (
       <>
-        <PrivacyPolicy />
+        <Navbar />
+        <Hero />
+        <ComeFunziona />
+        <Progetti />
+        <BrochureDownload />
+        <ChiSiamo />
+        <Contatti />
         <Footer />
       </>
     );
-  }
-
-  if (currentPage === "consulenza") return <LandingConsulenza />;
-  if (currentPage === "rendimento") return <LandingRendimento />;
-  if (currentPage === "investimento") return <LandingInvestimento />;
+  };
 
   return (
     <>
-      <Navbar />
-      <Hero />
-      <ComeFunziona />
-      <Progetti />
-      <BrochureDownload />
-      <ChiSiamo />
-      <Contatti />
-      <Footer />
+      {renderPage()}
+      <CookieBanner />
     </>
   );
 }

@@ -19,6 +19,7 @@ const LandingInvestimento = () => {
   });
   const [sent, setSent] = useState(false);
   const [error, setError] = useState("");
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const revealRefs = useRef([]);
 
   useEffect(() => {
@@ -54,6 +55,10 @@ const LandingInvestimento = () => {
     setError("");
     if (!formData.nome || !formData.email) {
       setError("Compila almeno nome e email.");
+      return;
+    }
+    if (!privacyAccepted) {
+      setError("Devi accettare la Privacy Policy per proseguire.");
       return;
     }
     emailjs
@@ -601,6 +606,27 @@ const LandingInvestimento = () => {
                   placeholder="Descrivi l'immobile o il tuo obiettivo..."
                 ></textarea>
               </div>
+              <label className="li-f-privacy">
+                <input
+                  type="checkbox"
+                  checked={privacyAccepted}
+                  onChange={(e) => {
+                    setPrivacyAccepted(e.target.checked);
+                    setError("");
+                  }}
+                />
+                <span>
+                  Accetto la{" "}
+                  <a
+                    href="/privacy-policy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Privacy Policy
+                  </a>{" "}
+                  e il trattamento dei miei dati personali
+                </span>
+              </label>
               <button className="li-f-submit" onClick={handleSubmit}>
                 Richiedi l'analisi gratuita →
               </button>
@@ -625,14 +651,15 @@ const LandingInvestimento = () => {
       {/* FOOTER */}
       <footer className="li-footer">
         <div className="li-f-logo">
-          Casa<span>sumisura</span>
+          Capital Investment<span> Milano</span>
         </div>
         <div className="li-f-info">
           📍 Via Venezuela 4, 20151 Milano (MI)
           <br />
-          ✉️ amministrazione@capitalinvestmentmilano.it
+          ✉️ info@capinvestment.it
           <br />
-          C.F. 13976270960 · © {new Date().getFullYear()} Casasumisura
+          C.F. 13976270960 · © {new Date().getFullYear()} Capital Investment
+          Milano
         </div>
       </footer>
     </div>

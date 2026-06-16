@@ -718,3 +718,84 @@
     padding: 32px 24px;
   }
 }
+
+@media (max-width: 768px) {
+  .lc-servizi-grid {
+    grid-template-columns: 1fr;
+  }
+  .lc-section,
+  .lc-form-sec {
+    padding: 56px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .lc-nav {
+    padding: 14px 18px;
+  }
+  .lc-logo {
+    font-size: 20px;
+  }
+  .lc-nav-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+  .lc-hero-left {
+    padding: 56px 18px 44px;
+  }
+  .lc-hero h1 {
+    font-size: 36px;
+  }
+  .lc-section,
+  .lc-form-sec {
+    padding: 48px 18px;
+  }
+  .lc-title {
+    font-size: 28px;
+  }
+  .lc-strip {
+    flex-wrap: wrap;
+    padding: 14px 18px;
+    gap: 10px 18px;
+    font-size: 12px;
+  }
+  .lc-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .lc-costo-pills {
+    flex-direction: column;
+  }
+  .lc-costo-box {
+    padding: 24px 18px;
+  }
+  .lc-form-box {
+    padding: 24px 16px;
+  }
+}
+
+.lc-f-privacy {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 4px 0 4px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #555;
+  text-align: left;
+  cursor: pointer;
+}
+
+.lc-f-privacy input[type="checkbox"] {
+  margin-top: 3px;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.lc-f-privacy a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+}
